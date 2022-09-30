@@ -1,1 +1,36 @@
-<p>nav works!</p>
+<header>
+
+  <a href="#" class="logo"><i class="fas fa-utensils"></i>Sauce</a>
+  <nav class="navbar">
+      <a routerLink="/Home">Home</a>
+      <a routerLink="/Recipes">Recipes</a>
+      <a routerLink="/OurTeam">About Us</a>
+      <a routerLink="/Ingredients">Ingredients</a>
+      <a routerLink="/Restaurants">Restaurant</a>
+  </nav>
+
+  <div>
+
+  </div>
+
+  <div class="icons">
+      <i class="fas fa-bars" id="menu-bars"></i>
+      <i routerLink="/Profile" class="fa-solid fa-user" ></i>
+      <i class="fa-solid fa-arrow-right-from-bracket"  ></i>
+      <i class="fa-solid fa-door-open"   routerLink="/UserAPI/SignIn"></i>
+      <a routerLink="/Cart" class="fas fa-shopping-cart"></a>
+      <a routerLink="/favorite"  class="fas fa-heart"></a>
+      <i ></i>
+
+  </div>
+
+</header>
+
+<!-- header section ends-->
+<!-- search form  -->
+
+<form action="" id="search-form">
+  <input type="text" placeholder="search here..." name="" id="search-box">
+  <label for="search-box" class="fas fa-search"></label>
+  <i class="fas fa-times" id="close"></i>
+</form>
