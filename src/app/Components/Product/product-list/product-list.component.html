@@ -1,1 +1,36 @@
-<p>product-list works!</p>
+
+
+<body>
+  <!--Filter SideBar-->
+  <aside>
+    <div class="searchbar">
+      <input id="search" type="text" placeholder=" Search" #rr (keyup)="getName(rr.value)"
+      (keyup)="getProductByName()"> <i
+        class="fa-solid fa-magnifying-glass" (click)="getProductByName()"></i>
+    </div>
+    <h5>Recipe Categories</h5>
+    <div class="check" *ngFor="let item of Categories">
+      <input type="checkbox" [value]="item.nameEN" #input (change)="getByCategory(input.value)"  />
+      <label> {{item.nameEN}}</label>
+    <hr style="width:50%;text-align:center;color: black;">
+
+    </div>
+    <hr>
+    <br>
+    <h3>Recipe Ingredients</h3>
+  </aside>
+  <!--Recipes-->
+  <div>
+    <h3 class="sub-heading">Recipes</h3>
+    <!-- <div *ngFor="let y of test">{{y}}</div> -->
+
+    <main>
+      <section class="dishes" id="dishes" *ngFor="let item of Products">
+      <div class="box-container">
+      </div>
+    </section>
+
+    </main>
+  </div>
+</body>
+
