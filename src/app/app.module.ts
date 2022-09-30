@@ -3,10 +3,20 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { UserComponent } from './Components/user/user.component';
+import { FavComponent } from './Components/fav/fav.component';
+import { CartComponent } from './Components/cart/cart.component';
+import { ProductComponent } from './Components/product/product.component';
+import { OrderComponent } from './Components/order/order.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    UserComponent,
+    FavComponent,
+    CartComponent,
+    ProductComponent,
+    OrderComponent
   ],
   imports: [
     BrowserModule,
