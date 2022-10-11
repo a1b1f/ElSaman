@@ -19,7 +19,7 @@ export class ProductListComponent implements OnInit {
   Products:Product[]=[];
   unfiltered:Product[]=[];
   Categories:Category[]=[];
-  recipeName:string="";
+  productName:string="";
   constructor( private ProductService: productservice) { }
 
   ngOnInit(): void {
@@ -52,14 +52,14 @@ export class ProductListComponent implements OnInit {
 
 
   getName(val:string){
-    this.recipeName=val;
+    this.productName=val;
   }
 
   getProductByName(){
     //console.log(this.recipeName)
-    if(this.recipeName!=="")
+    if(this.productName!=="")
         {
-        this.ProductService.getProductByName(this.recipeName).subscribe(res=>
+        this.ProductService.getProductByName(this.productName).subscribe(res=>
           {
             //console.log(res);
             this.unfiltered=res.data.data
@@ -95,7 +95,7 @@ export class ProductListComponent implements OnInit {
             this.tableSize = responce.pageSize;
             this.count = responce.count;
             this.Products = responce.data as Product[];
-            this.Products= this.Products.filter(i=>  i.nameEN.includes(this.recipeName))
+            this.Products= this.Products.filter(i=>  i.nameEN.includes(this.productName))
           })
         }
         else {
@@ -103,7 +103,7 @@ export class ProductListComponent implements OnInit {
           {
             //console.log(res);
             this.unfiltered=res.data.data
-            this.Products.push(...this.unfiltered.filter(i=>  i.nameEN.includes(this.recipeName)))
+            this.Products.push(...this.unfiltered.filter(i=>  i.nameEN.includes(this.productName)))
           })
         }
 
