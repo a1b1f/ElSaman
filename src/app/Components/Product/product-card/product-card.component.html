@@ -1,1 +1,13 @@
-<p>product-card works!</p>
+<div class="box" >
+  <a  class="fas fa-heart" (click)="AddFav(recipe.id)"></a>
+  <a [routerLink]="['/recipe/details',recipe.id]"  class="fas fa-eye"></a>
+    <img src="http://medorafie-001-site1.btempurl.com/{{recipe.imageUrl}}" alt="">
+    <h3>{{recipe.nameEN}}</h3>
+    <div >
+</div>
+   <br>
+   <br>
+    <div id="price" >{{recipe.price}} EGP</div>
+    <button  class="btn" (click)="AddTOCart(recipe.id)" >add to cart</button>
+
+</div>
