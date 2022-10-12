@@ -5,7 +5,6 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { FavComponent } from './Components/fav/fav.component';
 import { CartComponent } from './Components/cart/cart.component';
-import { OrderComponent } from './Components/order/order.component';
 import { HomeComponent } from './Components/home/home.component';
 import { NavComponent } from './Components/nav/nav.component';
 import { FooterComponent } from './Components/footer/footer.component';
@@ -23,13 +22,14 @@ import { RatingComponent } from './Components/rating/rating.component';
 import { OurTeamComponent } from './Components/our-team/our-team.component';
 import { SignUpComponent } from './Components/Account/sign-up/sign-up.component';
 import { LoginComponent } from './Components/Account/login/login.component';
+import { OrderComponent } from './Components/Order/order/order.component';
+import { AfterorderComponent } from './Components/Order/afterorder/afterorder.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     FavComponent,
     CartComponent,
-    OrderComponent,
     HomeComponent,
     NavComponent,
     FooterComponent,
@@ -39,6 +39,8 @@ import { LoginComponent } from './Components/Account/login/login.component';
     RatingComponent,
     OurTeamComponent,
     SignUpComponent,
+    OrderComponent,
+    AfterorderComponent,
 
   ],
   imports: [

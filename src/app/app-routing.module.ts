@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { CartComponent } from './Components/cart/cart.component';
 import { FavComponent } from './Components/fav/fav.component';
 import { HomeComponent } from './Components/home/home.component';
+import { AfterorderComponent } from './Components/Order/afterorder/afterorder.component';
+import { OrderComponent } from './Components/Order/order/order.component';
 import { OurTeamComponent } from './Components/our-team/our-team.component';
 import { ProductCardComponent } from './Components/Product/product-card/product-card.component';
 import { ProductDetailsComponent } from './Components/Product/product-details/product-details.component';
@@ -17,6 +19,10 @@ const routes: Routes = [
   {path:"Cart",component:CartComponent},
   {path:"Fav",component:FavComponent},
   {path:"Team",component:OurTeamComponent},
+  {path:"Order",component:OrderComponent},
+  {path:"order/sent",component:AfterorderComponent}
+
+
 
 
 
