@@ -21,6 +21,7 @@ import { StoreService } from 'src/Services/StoreService';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RatingComponent } from './Components/rating/rating.component';
+import { OurTeamComponent } from './Components/our-team/our-team.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +36,8 @@ import { RatingComponent } from './Components/rating/rating.component';
     ProductCardComponent,
     ProductListComponent,
     ProductDetailsComponent,
-    RatingComponent
+    RatingComponent,
+    OurTeamComponent
   ],
   imports: [
     BrowserModule,

@@ -1,1 +1,32 @@
-<p>cart works!</p>
+<body>
+
+
+  <!--main-->
+   <main class="container" id="container"  >
+     <section class="heading">
+        <div > Recipe</div>
+        <div>Quantity</div>
+        <div>Price</div>
+
+     </section>
+      <section *ngFor="let item of CartItem">
+
+        <div class="item"> {{item.recipe_Name}}</div>
+        <div class="item">
+           <i class="fa-solid fa-minus"  (click)="minus(item.recipe_ID)"></i>
+           {{item.qty}}
+            <i class="fa-solid fa-plus"  (click)="plus(item.recipe_ID)"></i>
+        </div>
+        <div class="item">{{item.price}}</div>
+        <div><i class="fa-solid fa-trash" (click)="remove(item.id)"></i></div>
+      </section>
+
+   </main>
+   <button class="btn" routerLink="/Order">Order Now</button>
+   <button class="btn">Empty Cart</button>
+
+
+  </body>
+
+
+
