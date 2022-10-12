@@ -9,27 +9,28 @@ import { Rating } from 'src/ViewModels/Rating';
 import { PagingViewModel } from 'src/ViewModels/result-view-model';
 import { Store } from 'src/ViewModels/Store';
 
+
+
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
   page: number = 1; //current page number
   count: number = 1; //total pages
 
   //number of elements to get form database per request
   tableSize: number = 6;
   tableSizes: any = [1, 5, 10, 20];
-  Products:Product[]=[];
+  Recipes:Product[]=[];
   unfiltered:Product[]=[];
   Rating:Rating[]=[];
   Categories:Category[]=[];
   recipeName:string="";
-  Store:Store[]=[];
+  restaurant:Store[]=[];
   restName:string="";
-  @Input() Product:Product= new Product();
+  @Input() recipe:Product= new Product();
 CartItems:addcart[]=[];
  @Input() rateval:number=0;
  //isInCart:boolean=false;
@@ -38,7 +39,7 @@ CartItems:addcart[]=[];
   hidden:string="hidden";
  AddTOCart(recipeID:number) {
 
-    this.cart.AddCart(1,recipeID,this.acc.getCurrentUserId()).subscribe(res=>this.Product.isInCart=res.data);
+    this.cart.AddCart(1,recipeID,this.acc.getCurrentUserId()).subscribe(res=>this.recipe.isInCart=res.data);
 
 }
   constructor(private cart:CartServices, private acc :AccountServices,
@@ -49,7 +50,7 @@ CartItems:addcart[]=[];
     this.StoreServices.getStore(this.tableSize,this.page).subscribe(res =>
       {
         // console.log(res);
-        this.Store=res.data.data
+        this.restaurant=res.data.data
       })
   }
   fetchData() {
@@ -59,10 +60,10 @@ CartItems:addcart[]=[];
       this.page = responce.pageIndex;
       this.tableSize = responce.pageSize;
       this.count = responce.count;
-      this.Products = responce.data as Product[];
+      this.Recipes = responce.data as Product[];
       // this.Recipes=this.Recipes.filter(i=> i.resturantID!=null)
       // console.log(res);
-      console.log(this.Products);
+      console.log(this.Recipes);
     })
   }
   onTableDataChange(event: any) {
@@ -93,7 +94,7 @@ getRestByName(){
       this.StoreServices.getStoreByName(this.restName) .subscribe(res=>
         {
           console.log(res);
-          this.Store=res.data
+          this.restaurant=res.data
         })
       }
 
@@ -106,7 +107,7 @@ getRestByName(){
         i.isChecked=!i.isChecked
       }
     })
-    this.Products=[];
+    this.Recipes=[];
     this.Categories.forEach(c=>{
       if(c.isChecked==true)
       {
@@ -114,7 +115,7 @@ getRestByName(){
           {
             console.log(res);
             this.unfiltered=res.data
-            this.Products.push(...this.unfiltered.filter(i=>i.isDeleted == false && i.nameEN.includes(this.recipeName)))
+            this.Recipes.push(...this.unfiltered.filter(i=>i.isDeleted == false && i.nameEN.includes(this.recipeName)))
           })
 
       }
@@ -135,7 +136,7 @@ getRestByName(){
           {
             console.log(res);
             this.unfiltered=res.data
-            this.Products=this.unfiltered.filter(i=>i.isDeleted == false)
+            this.Recipes=this.unfiltered.filter(i=>i.isDeleted == false)
           })
         }
   }

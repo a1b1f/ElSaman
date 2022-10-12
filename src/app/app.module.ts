@@ -13,6 +13,14 @@ import { FooterComponent } from './Components/footer/footer.component';
 import { ProductCardComponent } from './Components/Product/product-card/product-card.component';
 import { ProductListComponent } from './Components/Product/product-list/product-list.component';
 import { ProductDetailsComponent } from './Components/Product/product-details/product-details.component';
+import { productservice } from 'src/Services/productservice';
+import { AccountServices } from 'src/Services/Account';
+import { CartServices } from 'src/Services/Cart';
+import { favServices } from 'src/Services/Fav';
+import { StoreService } from 'src/Services/StoreService';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RatingComponent } from './Components/rating/rating.component';
 
 @NgModule({
   declarations: [
@@ -26,13 +34,24 @@ import { ProductDetailsComponent } from './Components/Product/product-details/pr
     FooterComponent,
     ProductCardComponent,
     ProductListComponent,
-    ProductDetailsComponent
+    ProductDetailsComponent,
+    RatingComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [
+    AccountServices,
+    productservice,
+   StoreService,
+    CartServices,
+    favServices
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,1 +1,36 @@
-<p>product-details works!</p>
+
+ <body>
+  <div class="container">
+   <img
+    src="http://medorafie-001-site1.btempurl.com{{Products.imageUrl}}"
+    alt="Pancake"
+   />
+   <div class="container__text">
+    <h1>{{Products.nameEN}}</h1>
+    <div class="container__text__star">
+
+ <app-rating [value]="Products.RateValue" [recipeId]="Products.id" class="star " ></app-rating>
+
+    </div>
+    <p>{{Products.details}}</p>
+    <!-- <div class="container__text__timing">
+     <div class="container__text__timing_time">
+      <h2>Hands-on Time</h2>
+      <p>30 min</p>
+     </div>
+     <div class="container__text__timing_time">
+      <h2>Total Time</h2>
+      <p>40 min</p>
+     </div>
+     <div class="container__text__timing_time">
+      <h2>Yield</h2>
+      <p>40 min</p>
+     </div>
+    </div> -->
+    <!-- <button class="btn">view Ingredients <i class="fa fa-arrow-right"></i></button> -->
+    <button class="btn" [routerLink]="['/recipe/Ingredients',Products.id]"> View Ingredients <i class="fa fa-arrow-right"></i></button>
+
+   </div>
+  </div>
+ </body>
+

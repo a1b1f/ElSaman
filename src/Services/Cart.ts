@@ -6,8 +6,6 @@ import { ResultViewModel } from "src/ViewModels/result-view-model";
 
 
 
-
-
 @Injectable()
 
 
