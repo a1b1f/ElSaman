@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<title>Register</title>
+	<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet"
+		integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+</head>
+<!--<body>
+  <form enctype="multipart/form-data" method="post" [formGroup]="form" >
+	<div class="box-form">
+		<div class="left">
+			<div class="overlay">
+				<i class="fas fa-utensils"></i>
+				<a href="#" class="logo">Sauce</a>
+			</div>
+		</div>
+		<div class="right">
+			<h5>Register</h5>
+			<div class="inputs">
+				<input type="text" formControlName="NameEN" placeholder="NameEN">
+        <span class="text-danger" *ngIf="form.controls['NameEN'].hasError('required')">Required NameEN</span>
+
+				<br>
+
+        <input type="text" formControlName="NameAR" placeholder="NameAR">
+        <span class="text-danger" *ngIf="form.controls['NameAR'].hasError('required')">Required NameAR</span>
+				<br>
+				<input type="text" formControlName="Role" placeholder="Role">
+        <span class="text-danger" *ngIf="form.controls['Role'].hasError('required')">Required Role</span>
+		<br>
+
+
+				<input type="text" formControlName="Email" placeholder="Email" placeholder="Email">
+        <span class="text-danger" *ngIf="form.controls['Email'].hasError('required')">Required Email</span>
+      <span class="text-danger" *ngIf="form.controls['Email'].hasError('email')">Must be an Email Patern</span>
+				<br>
+				<input type="number"  formControlName="Phone" placeholder="Phone">
+        <span class="text-danger" *ngIf="form.controls['Phone'].hasError('required')">Required Phone</span>
+        <span class="text-danger" *ngIf="form.controls['Phone'].hasError('maxLength')">Must be 11 Numbers</span>
+				<br>
+				<input type="password" formControlName="Password" (change)="onPasswordChange()" placeholder="Password">
+        <span class="text-danger" *ngIf="form.controls['Password'].hasError('required')">Required Password</span>
+
+				<br>
+				<input type="password" formControlName="ConfirmPassword" (change)="onPasswordChange()" placeholder="Confarem Password">
+        <span class="text-danger" *ngIf="form.controls['ConfirmPassword'].hasError('required')">Required ConfirmPassword</span>
+        <span class="text-danger" *ngIf="confirm_password.hasError('mismatch')">Password do not match.</span>
+			</div>
+
+			<br><br>
+
+			<div class="remember-me--forget-password">
+
+				<label>
+					<input type="checkbox" name="item" checked />
+					<span class="text-checkbox">Remember me</span>
+				</label>
+
+			</div>
+
+			<br>
+			<button type="submit" [disabled]="form.invalid" (click)="add()">Register Now</button>
+		</div>
+
+	</div>
+
+</form>
+</body>
+
+</html> -->
+
+<body>
+	<form class="login-form" enctype="multipart/form-data" method="post" [formGroup]="form">
+		<div class="login-wrap">
+			<div class="login-html">
+				<input id="tab-2" type="radio" name="tab" class="sign-in">
+				<label for="tab-2" class="tab"><a  routerLink="/UserAPI/SignIn">SignIn</a></label>
+				<input id="tab-1" type="radio" name="tab" class="sign-in" checked>
+				<label style="color:white;" for="tab-1" class="tab"> <a asp-action="SignUp"
+						asp-controller="Users">SignUp</a>
+				</label>
+				<!-- <div class="sign-up-htm"> -->
+				<div class="group">
+					<input id="user" type="text" class="input" formControlName="NameEN" placeholder="English Name">
+					<br>
+				<span style="color:indianred" *ngIf="form.controls['NameEN'].hasError('required')">Required English Name</span>
+				</div>
+				<br>
+				<div class="group">
+
+					<input  id="user" type="text" class="input" formControlName="NameAR" placeholder="Arabic Name">
+					<br>
+					<span style="color:indianred" *ngIf="form.controls['NameAR'].hasError('required')">Required Arabic Name</span>
+				</div>
+				<!-- <div class="group">
+				<br>
+				<input id="user" type="text" class="input" formControlName="Role" placeholder="Role">
+				<br>
+        <span style="color:indianred" *ngIf="form.controls['Role'].hasError('required')">Required Role</span>
+	</div> -->
+
+		<br>
+				<div class="group">
+					<input  id="user"  class="input" type="text" formControlName="Phone" placeholder="Phone">
+					<br>
+
+					<span style="color:indianred" *ngIf="form.controls['Phone'].hasError('required')">Required Phone</span>
+					<span style="color:indianred" *ngIf="form.controls['Phone'].hasError('maxLength')">Must be 11
+						Numbers</span>
+					<br>
+				</div>
+				<div class="group">
+					<input id="user" class="input" formControlName="Email" placeholder="Email" placeholder="Email">
+					<br>
+
+					<span style="color:indianred" *ngIf="form.controls['Email'].hasError('required')">Required Email</span>
+					<span style="color:indianred" *ngIf="form.controls['Email'].hasError('email')">Must be an Email
+						Patern</span>
+					<br>
+				</div>
+				<div class="group">
+					<input id="user"  class="input" type="password" formControlName="Password" (change)="onPasswordChange()"
+						placeholder="Password">
+					<br>
+
+					<span style="color:indianred" *ngIf="form.controls['Password'].hasError('required')">Required
+						Password</span>
+
+					<br>
+				</div>
+
+				<div class="group">
+					<input id="user"  class="input" type="password" formControlName="ConfirmPassword" (change)="onPasswordChange()"
+						placeholder="Confarem Password">
+					<br>
+					<span style="color:indianred" *ngIf="form.controls['ConfirmPassword'].hasError('required')">Required
+						Confirm Password</span>
+					<span style="color:indianred" *ngIf="confirm_password.hasError('mismatch')">Password do not
+						match.</span>
+				</div>
+
+				<br>
+
+				<div  class="remember-me--forget-password">
+
+					<label>
+						<input id="user"  class="input" type="checkbox" name="item" checked />
+						<span class="text-checkbox">Remember me</span>
+					</label>
+
+					<div class="group">
+						<button type="submit" class="button" [disabled]="form.invalid" (click)="add()">Register Now</button>
+					</div>
+			</div>
+		</div>
+
+		</div>
+	</form>
+
+	<script src="~/Content/JS/vendor.js"></script>
+
+	<script src="~/Content/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+</body>

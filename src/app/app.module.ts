@@ -3,7 +3,6 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { UserComponent } from './Components/user/user.component';
 import { FavComponent } from './Components/fav/fav.component';
 import { CartComponent } from './Components/cart/cart.component';
 import { OrderComponent } from './Components/order/order.component';
@@ -22,11 +21,12 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RatingComponent } from './Components/rating/rating.component';
 import { OurTeamComponent } from './Components/our-team/our-team.component';
+import { SignUpComponent } from './Components/Account/sign-up/sign-up.component';
+import { LoginComponent } from './Components/Account/login/login.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    UserComponent,
     FavComponent,
     CartComponent,
     OrderComponent,
@@ -37,7 +37,9 @@ import { OurTeamComponent } from './Components/our-team/our-team.component';
     ProductListComponent,
     ProductDetailsComponent,
     RatingComponent,
-    OurTeamComponent
+    OurTeamComponent,
+    SignUpComponent,
+
   ],
   imports: [
     BrowserModule,
