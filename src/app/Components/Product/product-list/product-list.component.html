@@ -8,7 +8,7 @@
       (keyup)="getProductByName()"> <i
         class="fa-solid fa-magnifying-glass" (click)="getProductByName()"></i>
     </div>
-    <h5>Recipe Categories</h5>
+    <h5> Categories</h5>
     <div class="check" *ngFor="let item of Categories">
       <input type="checkbox" [value]="item.nameEN" #input (change)="getByCategory(input.value)"  />
       <label> {{item.nameEN}}</label>
@@ -17,16 +17,16 @@
     </div>
     <hr>
     <br>
-    <h3>Recipe Ingredients</h3>
   </aside>
   <!--Recipes-->
   <div>
-    <h3 class="sub-heading">Recipes</h3>
+    <h3 class="sub-heading">Products</h3>
     <!-- <div *ngFor="let y of test">{{y}}</div> -->
 
     <main>
       <section class="dishes" id="dishes" *ngFor="let item of Products">
       <div class="box-container">
+        <app-product-card [product]="item"></app-product-card>
       </div>
     </section>
 

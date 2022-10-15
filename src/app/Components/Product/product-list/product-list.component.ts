@@ -28,15 +28,17 @@ export class ProductListComponent implements OnInit {
   fetchData() {
     //console.log(this.tableSize,this.page)
     this.ProductService.getProduct(this.tableSize,this.page).subscribe(res => {
-      let responce = res.data as PagingViewModel
-      this.page = responce.pageIndex;
-      this.tableSize = responce.pageSize;
-      this.count = responce.count;
-      this.unfiltered = responce.data as Product[];
-      this.Products=this.unfiltered.filter(i=> i.StoreID==null) as Product[]
+      console.log(res.data.data)
+
+      let response = res.data as PagingViewModel
+      this.page = response.pageIndex;
+      this.tableSize = response.pageSize;
+      this.count = response.count;
+      this.Products = response.data as Product[];
       this.getProductByName();
       this.ProductService.getCategories().subscribe(res=>
         {
+          console.log(res)
           this.Categories=res.data ;
           var c = new Category();
           c.nameEN="All";
@@ -62,18 +64,18 @@ export class ProductListComponent implements OnInit {
         this.ProductService.getProductByName(this.productName).subscribe(res=>
           {
             //console.log(res);
-            this.unfiltered=res.data.data
+            this.Products=res.data.data
 
-            this.Products=this.unfiltered.filter(i=>i.isDeleted == false)
+            // this.Products=this.unfiltered.filter(i=>i.isDeleted == false)
           })
         }
         else{
           this.ProductService.getProduct(this.tableSize,this.page).subscribe(res => {
-            let responce = res.data as PagingViewModel
-            this.page = responce.pageIndex;
-            this.tableSize = responce.pageSize;
-            this.count = responce.count;
-            this.Products = responce.data as Product[];})
+            let response = res.data as PagingViewModel
+            this.page = response.pageIndex;
+            this.tableSize = response.pageSize;
+            this.count = response.count;
+            this.Products = response.data as Product[];})
 
         }
   }
@@ -90,18 +92,18 @@ export class ProductListComponent implements OnInit {
       {
         if(c.nameEN=="All"){
           this.ProductService.getProduct(this.tableSize,this.page).subscribe(res => {
-            let responce = res.data as PagingViewModel
-            this.page = responce.pageIndex;
-            this.tableSize = responce.pageSize;
-            this.count = responce.count;
-            this.Products = responce.data as Product[];
+            let response = res.data as PagingViewModel
+            this.page = response.pageIndex;
+            this.tableSize = response.pageSize;
+            this.count = response.count;
+            this.Products = response.data as Product[];
             this.Products= this.Products.filter(i=>  i.nameEN.includes(this.productName))
           })
         }
         else {
         this.ProductService.getByCategory(c.nameEN).subscribe(res=>
           {
-            //console.log(res);
+            console.log(res);
             this.unfiltered=res.data.data
             this.Products.push(...this.unfiltered.filter(i=>  i.nameEN.includes(this.productName)))
           })

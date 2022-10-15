@@ -21,7 +21,7 @@ getCategories(){
   return this.http.get<ResultViewModel>("https://localhost:7129/CategoryAPI/Get");
 }
 getByCategory(cName:string){
-  return this.http.get<ResultViewModel>("https://localhost:7129/GetAPI?category="+cName)
+  return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetAPI?category="+cName)
 }
 
 getRating(){

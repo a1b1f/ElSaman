@@ -10,7 +10,7 @@ import { Product } from 'src/ViewModels/product';
   styleUrls: ['./product-card.component.css']
 })
 export class ProductCardComponent implements OnInit {
-  @Input() recipe:Product= new Product();
+  @Input() product:Product= new Product();
   CartItems:addcart[]=[];
    @Input() rateval:number=0;
    //isInCart:boolean=false;
@@ -19,7 +19,7 @@ export class ProductCardComponent implements OnInit {
 
     hidden:string="hidden";
    AddTOCart(recipeID:number) {
-      this.cart.AddCart(1,recipeID,this.acc.getCurrentUserId()).subscribe(res=>this.recipe.isInCart=res.data);
+      this.cart.AddCart(1,recipeID,this.acc.getCurrentUserId()).subscribe(res=>this.product.isInCart=res.data);
   }
   AddFav(recipeID:number){
     this.fav.AddFav(recipeID,this.acc.getCurrentUserId()).subscribe(res=>console.log(res));
@@ -33,7 +33,7 @@ export class ProductCardComponent implements OnInit {
       private fav:favServices) {   }
 
     ngOnInit(): void {
-      console.log(this.recipe)
+      console.log(this.product)
     }
 
 }
