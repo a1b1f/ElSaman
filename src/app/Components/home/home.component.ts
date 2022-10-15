@@ -23,23 +23,23 @@ export class HomeComponent implements OnInit {
   //number of elements to get form database per request
   tableSize: number = 6;
   tableSizes: any = [1, 5, 10, 20];
-  Recipes:Product[]=[];
+  products:Product[]=[];
   unfiltered:Product[]=[];
   Rating:Rating[]=[];
   Categories:Category[]=[];
-  recipeName:string="";
-  restaurant:Store[]=[];
-  restName:string="";
-  @Input() recipe:Product= new Product();
+  productName:string="";
+  Store:Store[]=[];
+  storeName:string="";
+  @Input() product:Product= new Product();
 CartItems:addcart[]=[];
  @Input() rateval:number=0;
  //isInCart:boolean=false;
  btnDis:string="btnDis";
  btn:string="btn";
   hidden:string="hidden";
- AddTOCart(recipeID:number) {
+ AddTOCart(productID:number) {
 
-    this.cart.AddCart(1,recipeID,this.acc.getCurrentUserId()).subscribe(res=>this.recipe.isInCart=res.data);
+    this.cart.AddCart(1,productID,this.acc.getCurrentUserId()).subscribe(res=>this.product.isInCart=res.data);
 
 }
   constructor(private cart:CartServices, private acc :AccountServices,
@@ -50,7 +50,7 @@ CartItems:addcart[]=[];
     this.StoreServices.getStore(this.tableSize,this.page).subscribe(res =>
       {
         // console.log(res);
-        this.restaurant=res.data.data
+        this.Store=res.data.data
       })
   }
   fetchData() {
@@ -60,10 +60,10 @@ CartItems:addcart[]=[];
       this.page = responce.pageIndex;
       this.tableSize = responce.pageSize;
       this.count = responce.count;
-      this.Recipes = responce.data as Product[];
+      this.products = responce.data as Product[];
       // this.Recipes=this.Recipes.filter(i=> i.resturantID!=null)
       // console.log(res);
-      console.log(this.Recipes);
+      console.log(this.products);
     })
   }
   onTableDataChange(event: any) {
@@ -83,18 +83,18 @@ CartItems:addcart[]=[];
 // resturant
 
 getNameres(valu:string){
-  this.restName=valu;
+  this.storeName=valu;
 }
 
 
 getRestByName(){
   //console.log(this.restName)
-  if(this.restName!=="")
+  if(this.storeName!=="")
       {
-      this.StoreServices.getStoreByName(this.restName) .subscribe(res=>
+      this.StoreServices.getStoreByName(this.storeName) .subscribe(res=>
         {
           console.log(res);
-          this.restaurant=res.data
+          this.Store=res.data
         })
       }
 
@@ -107,7 +107,7 @@ getRestByName(){
         i.isChecked=!i.isChecked
       }
     })
-    this.Recipes=[];
+    this.products=[];
     this.Categories.forEach(c=>{
       if(c.isChecked==true)
       {
@@ -115,7 +115,7 @@ getRestByName(){
           {
             console.log(res);
             this.unfiltered=res.data
-            this.Recipes.push(...this.unfiltered.filter(i=>i.isDeleted == false && i.nameEN.includes(this.recipeName)))
+            this.products.push(...this.unfiltered.filter(i=>i.isDeleted == false && i.nameEN.includes(this.productName)))
           })
 
       }
@@ -124,19 +124,19 @@ getRestByName(){
   console.log(this.Categories)
   }
   getName(val:string){
-    this.recipeName=val;
+    this.productName=val;
   }
 
 
   getRecipesByName(){
-    console.log(this.recipeName)
-    if(this.recipeName!=="")
+    console.log(this.productName)
+    if(this.productName!=="")
         {
-        this.ProductService.getProductByName(this.recipeName).subscribe(res=>
+        this.ProductService.getProductByName(this.productName).subscribe(res=>
           {
             console.log(res);
             this.unfiltered=res.data
-            this.Recipes=this.unfiltered.filter(i=>i.isDeleted == false)
+            this.products=this.unfiltered.filter(i=>i.isDeleted == false)
           })
         }
   }

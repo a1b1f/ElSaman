@@ -21,11 +21,11 @@ export class CartComponent implements OnInit {
   show() {
     this.cart.GetCart().subscribe((res) => {
       this.CartItem = res.data.data;
-      this.GetRecipeNames();
-      this.GetRecipePrices();
+      this.getProductNames();
+      this.getProductPrices();
     });
   }
-  GetRecipeNames() {
+  getProductNames() {
     this.CartItem.forEach((element) => {
       this.cart
         .GetRecipeById(element.recipe_ID)
@@ -37,7 +37,7 @@ export class CartComponent implements OnInit {
     });
     //console.log(this.CartItem);
   }
-  GetRecipePrices() {
+  getProductPrices() {
     this.CartItem.forEach((element) => {
       this.cart.GetRecipeById(element.recipe_ID).subscribe((res) => {
         //console.log(res.data)
@@ -51,7 +51,7 @@ export class CartComponent implements OnInit {
     var index = this.CartItem.findIndex((i) => i.recipe_ID == recipeID);
     this.CartItem[index].qty--;
     this.cart.UpdateCart(this.CartItem[index].qty,this.CartItem[index].id,this.CartItem[index].recipe_ID,this.acc.getCurrentUserId()).subscribe()
-    this.GetRecipePrices();
+    this.getProductPrices();
   }
   plus(recipeID: number) {
     //console.log(recipeID);
@@ -59,7 +59,7 @@ export class CartComponent implements OnInit {
     console.log(this.CartItem[index])
     this.CartItem[index].qty++;
     this.cart.UpdateCart(this.CartItem[index].qty,this.CartItem[index].id,recipeID,this.acc.getCurrentUserId()).subscribe()
-    this.GetRecipePrices();
+    this.getProductPrices();
 
   }
   remove(CartID: number) {
