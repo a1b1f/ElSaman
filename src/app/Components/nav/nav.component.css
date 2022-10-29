@@ -1,8 +1,6 @@
-*{
-  transition: all .2s linear;
+/* 
+ */
 
-
-}
 .navs {
 
   color: white;
@@ -68,6 +66,7 @@ li {
 .navstyle {
 
   padding: 1% 0;
+  margin: 0;
 }
 
 a {
@@ -147,9 +146,9 @@ header .icons #menu-bars{
   color:#eee;
 }
 
-#search-form #search-box::-webkit-search-cancel-button{
+/* #search-form #search-box::-webkit-search-cancel-button{
   -webkit-appearance: none;
-}
+} */
 
 #search-form label{
   color:#fff;

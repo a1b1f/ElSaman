@@ -26,6 +26,7 @@ import { OrderComponent } from './Components/Order/order/order.component';
 import { AfterorderComponent } from './Components/Order/afterorder/afterorder.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 
+
 @NgModule({
   declarations: [
     AppComponent,
