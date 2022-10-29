@@ -24,6 +24,7 @@ import { SignUpComponent } from './Components/Account/sign-up/sign-up.component'
 import { LoginComponent } from './Components/Account/login/login.component';
 import { OrderComponent } from './Components/Order/order/order.component';
 import { AfterorderComponent } from './Components/Order/afterorder/afterorder.component';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 @NgModule({
   declarations: [
@@ -49,7 +50,8 @@ import { AfterorderComponent } from './Components/Order/afterorder/afterorder.co
     HttpClientModule,
     ReactiveFormsModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    NgxPaginationModule,
   ],
   providers: [
     AccountServices,
