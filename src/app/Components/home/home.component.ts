@@ -21,7 +21,7 @@ export class HomeComponent implements OnInit {
   count: number = 1; //total pages
 
   //number of elements to get form database per request
-  tableSize: number = 6;
+  tableSize: number = 15;
   tableSizes: any = [1, 5, 10, 20];
   Recipes:Product[]=[];
   unfiltered:Product[]=[];

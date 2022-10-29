@@ -70,10 +70,10 @@ main{
 }
 aside{
     padding: 5px;
-    background-color: #F6EE99;
+    background-color: rgba(221, 28, 28, 0.87);
     height: 100%;
     font-size: 20px;
-    color: #143444;
+    color: #fff;
 
 }
 aside h5{

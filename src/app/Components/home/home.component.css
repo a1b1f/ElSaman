@@ -17,6 +17,7 @@ html{
 }
 body{
   margin: 0%;
+  background: #333;
 }
 
 section{
@@ -27,12 +28,12 @@ section:nth-child(even){
   background:#eee;
 }
 #Imghome{
-   background-image: url(./../../../assets/سشيشسيشسي.jpg);
-background-size: 1350px ;
+   background-image: url(./../../../assets/Inkeds.jpg);
+background-size: 1300px ;
 }
 .sub-heading{
   text-align: center;
-  color:#e2d11a;
+  color:rgb(223, 39, 39);
   font-size: 3rem;
   /* padding-top: 1rem; */
 
@@ -316,7 +317,7 @@ section .item{
   border:.1rem solid rgba(0,0,0,.2);
   border-radius: .5rem;
   position: relative;
-  background-color: #eee;
+  background-color: #fff;
 }
 
 

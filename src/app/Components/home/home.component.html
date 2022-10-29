@@ -8,21 +8,21 @@
       <div class=" home-slider">
 
               <div class=" slide">
-                  <div class="content">
-                      <span> Welcome, Foodies</span>
+                  <!-- <div class="content"> -->
+                      <!-- <span> Welcome, Foodies</span>
                       <h3>Sauce is always here to serve you.</h3>
                       <p> Sauce is a place that you go to when you can't decide what your next meal. We offer you
                           delicious recipes and well-known restaurants.
                       </p>
-                      <a routerLink="/SignUpAs" class="btn">login/register</a>
+                      <a routerLink="/SignUpAs" class="btn">login/register</a> -->
 
-                  </div>
-                  <div class="image">
+                  <!-- </div> -->
+                  <!-- <div class="image"> -->
                       <!-- <img src="../../../assets/home-img-2.png" alt=""> -->
-                  </div>
-              </div>
+                  <!-- </div>
+              </div> -->
       </div>
-
+      </div>
   </section>
 
   <!-- home section ends -->
@@ -31,38 +31,23 @@
 
 
   <div style=" background:#eee; ">
-      <h3 class="sub-heading">popular Recipes </h3>
-
-
+      <h3 class="sub-heading">Products </h3>
       <main>
-
-          <!-- <section class="dishes" id="dishes" *ngFor="let item of Products
-          | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}">
-          <div >
-
-              </div>
-        </section> -->
-
-        </main>
-      <!-- <main>
-
-          <section class="dishes" id="dishes" *ngFor="let item of Recipes
-          | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}"> -->
-          <!-- <div *ngIf="item.resturantID!=null"> -->
-              <!-- <div>
-            <app-recipe-card  [recipe]="item"></app-recipe-card>
+            
+        <section class="dishes" id="dishes" *ngFor="let item of Recipes ">
+        <div >
+            <app-product-card  [product]="item"></app-product-card>
             </div>
-
-        </section>
-
-        </main> -->
+      </section>
+        
+      </main>
         </div>
 
   <!-- dishes section ends -->
 
   <!-- about section starts  -->
 
-  <section style="background-color: #143444;" class="about" id="about">
+  <!-- <section style="background-color: #143444;" class="about" id="about">
 
       <h3 class="sub-heading"> about us </h3>
       <h1 class="heading"> why choose us? </h1>
@@ -79,26 +64,12 @@
                   delicious recipes and well-known restaurants.
               You can find the ingredients of any recipe you want and the steps of how to make it. Also, if you don't want to cook ,
                   well-known restaurants and their recipes are available.  </p>
-              <!-- <div class="icons-container"> -->
-                  <!-- <div class="icons">
-                      <i class="fas fa-shipping-fast"></i>
-                      <span>free delivery</span>
-                  </div> -->
-                  <!-- <div class="icons">
-                      <i class="fas fa-dollar-sign"></i>
-                      <span>easy payments</span>
-                  </div> -->
-                  <!-- <div class="icons">
-                      <i class="fas fa-headset"></i>
-                      <span>24/7 service</span>
-                  </div> -->
-              <!-- </div>
-              <a href="#" class="btn">learn more</a> -->
+            
           </div>
 
       </div>
 
-  </section>
+  </section> -->
 
   <!-- about section ends -->
 
@@ -107,190 +78,20 @@
   <!-- <section class="menu" id="menu"> -->
 
 
-    <div style=" background:#eee; ">
+    <!-- <div style=" background:#fff; ">
       <h3 class="sub-heading">Restaurants </h3>
-      <!-- <main>
-          <section class="dishes" id="dishes" *ngFor="let item of Store
-          | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}">
-          <div>
 
-          </div>
-      </section>
-        </main> -->
-        </div>
+        </div> -->
 
 
-      <!-- <div style=" background:#eee; ">
-          <h3 class="sub-heading"> our Meals </h3>
-          <h1 class="heading"> today's speciality </h1>
-          <main>
-
-          <section class="dishes" id="dishes" *ngFor="let item of Recipes
-          | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}">
-          <div >
-              <app-home-made-recipe  [recipe]="item"></app-home-made-recipe>
-              </div>
-        </section>
-
-        </main> -->
-
-
-          <!-- <div class="box">
-              <a href="#" class="fas fa-heart"></a>
-              <a [routerLink]="['/recipe/details',recipe.id]"  class="fas fa-eye"></a>
-              <div class="image">
-                  <img src="../../../assets/1.jpg" alt="">
-
-              </div>
-              <div class="content">
-                  <app-rating [value]="recipe.RateValue" [recipeId]="recipe.id" ></app-rating>
-                  <h3>delicious food</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p> -->
-
-                  <!-- <span class="price">$12.99</span> -->
-              <!-- </div>
-          </div>
-
-          <div class="box">
-              <a href="#" class="fas fa-heart"></a>
-              <a [routerLink]="['/recipe/details',recipe.id]"  class="fas fa-eye"></a>
-              <div class="image">
-                  <img src="../../../assets/2.jpg" alt="">
-
-              </div>
-              <div class="content">
-                  <app-rating [value]="recipe.RateValue" [recipeId]="recipe.id" ></app-rating>
-                  <h3>delicious food</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p> -->
-
-                  <!-- <span class="price">$12.99</span> -->
-              <!-- </div>
-          </div>
-
-          <div class="box">
-              <a href="#" class="fas fa-heart"></a>
-              <a [routerLink]="['/recipe/details',recipe.id]"  class="fas fa-eye"></a>
-              <div class="image">
-                  <img src="../../../assets/3.jpg" alt="">
-
-              </div>
-              <div class="content">
-                  <app-rating [value]="recipe.RateValue" [recipeId]="recipe.id" ></app-rating>
-                  <h3>delicious food</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p> -->
-
-                  <!-- <span class="price">$12.99</span> -->
-              <!-- </div>
-          </div>
-
-          <div class="box">
-              <a href="#" class="fas fa-heart"></a>
-              <a [routerLink]="['/recipe/details',recipe.id]"  class="fas fa-eye"></a>
-              <div class="image">
-                  <img src="../../../assets/4.jpg" alt="">
-
-              </div>
-              <div class="content">
-                  <app-rating [value]="recipe.RateValue" [recipeId]="recipe.id" ></app-rating>
-                  <h3>delicious food</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p> -->
-
-                  <!-- <span class="price">$12.99</span> -->
-              <!-- </div>
-          </div>
-
-          <div class="box">
-              <a href="#" class="fas fa-heart"></a>
-              <a [routerLink]="['/recipe/details',recipe.id]"  class="fas fa-eye"></a>
-              <div class="image">
-                  <img src="../../../assets/5.jpg" alt="">
-
-              </div>
-              <div class="content">
-                  <app-rating [value]="recipe.RateValue" [recipeId]="recipe.id" ></app-rating>
-                  <h3>delicious food</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p> -->
-
-                  <!-- <span class="price">$12.99</span> -->
-              <!-- </div>
-          </div>
-
-          <div class="box">
-              <a href="#" class="fas fa-heart"></a>
-              <a [routerLink]="['/recipe/details',recipe.id]"  class="fas fa-eye"></a>
-              <div class="image">
-                  <img src="../../../assets/6.jpg" alt="">
-
-              </div>
-              <div class="content">
-                  <app-rating [value]="recipe.RateValue" [recipeId]="recipe.id" ></app-rating>
-                  <h3>delicious food</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p> -->
-
-                  <!-- <span class="price">$12.99</span> -->
-              <!-- </div>
-          </div>
-
-          <div class="box">
-              <a href="#" class="fas fa-heart"></a>
-              <a [routerLink]="['/recipe/details',recipe.id]"  class="fas fa-eye"></a>
-              <div class="image">
-                  <img src="../../../assets/7.jpg" alt="">
-
-              </div>
-              <div class="content">
-                  <app-rating [value]="recipe.RateValue" [recipeId]="recipe.id" ></app-rating>
-                  <h3>delicious food</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p> -->
-
-                  <!-- <span class="price">$12.99</span> -->
-              <!-- </div>
-          </div>
-
-          <div class="box">
-              <a href="#" class="fas fa-heart"></a>
-              <a [routerLink]="['/recipe/details',recipe.id]"  class="fas fa-eye"></a>
-              <div class="image">
-                  <img src="../../../assets/8.jpg" alt="">
-
-              </div>
-              <div class="content">
-                  <app-rating [value]="recipe.RateValue" [recipeId]="recipe.id" ></app-rating>
-                  <h3>delicious food</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p> -->
-
-                  <!-- <span class="price">$12.99</span> -->
-              <!-- </div>
-          </div>
-
-          <div class="box">
-              <a href="#" class="fas fa-heart"></a>
-              <a [routerLink]="['/recipe/details',recipe.id]"  class="fas fa-eye"></a>
-              <div class="image">
-                  <img src="../../../assets/9.jpg" alt="">
-
-              </div>
-              <div class="content">
-                  <app-rating [value]="recipe.RateValue" [recipeId]="recipe.id" ></app-rating>
-                  <h3>delicious food</h3>
-                  <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi, accusantium.</p> -->
-
-                  <!-- <span class="price">$12.99</span> -->
-              <!-- </div>
-          </div> -->
-
-      <!-- </div> -->
-
-  <!-- </section> -->
 
   <!-- meals section ends -->
 
   <!--Ingredients section starts  -->
 
-  <section style="background-color: #143444; " class="item"  id="item">
+  <!-- <section style="background-color: #143444; " class="item"  id="item">
 
       <h3 class="sub-heading">Ingredients</h3>
-      <!-- <h1 class="heading"> what they say </h1> -->
       <div  >
           <img src="../../../assets/1.1.png">
             <img src="../../../assets/1.2.png">
@@ -301,28 +102,13 @@
                   <img src="../../../assets/1.7.png">
                   <img src="../../../assets/1.8.png">
       </div>
-  </section>
+  </section> -->
 
   <!-- Ingredients section ends -->
 
   <!-- Restaurant section starts  -->
-
-  <!-- <section class="dishes" id="dishes">
-     <div class="box-container">
-      <h3 class="sub-heading">Restaurants</h3>
-  <main>
-    <section class="dishes" id="dishes" *ngFor="let item of restaurant
-      | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}">
-      <div class="box-container">
-        <app-restaurant [restaurant]="item"></app-restaurant>
-      </div>
-    </section>
-  </main>
-      </div>
-  </section> -->
-
-  <div style=" background:#eee; height: 30px; ">
-</div>
+  <!-- <div style=" background:#eee; height: 30px; ">
+</div> -->
 
 
   <!-- Restaurant section ends -->

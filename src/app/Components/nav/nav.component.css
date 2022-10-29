@@ -3,36 +3,75 @@
 
 
 }
+.navs {
 
-
-a{
-
-  text-decoration: none;
-  outline: none;
-  border:none;
-
+  color: white;
+  border-bottom: 5px rgb(204, 26, 49) solid;
+  background-color: rgb(22, 21, 28);
+  position: sticky;
+  top: 0;
+  left: 0;
+  z-index: 10;
 }
-header{
-  position: fixed;
-  top:0; left: 0; right:0;
-  background: #143444;
-  padding:0.4rem 3%;
+
+.brand {
+
+  width: 60px;
+  height: 60px;
   display: flex;
-  align-items: center;
+margin-left: 20px;
+  margin-top: 35;
+  border-radius: 50%;
+
+}
+
+.brand img {
+  border-radius: 50%;
+}
+
+.ulstyle {
+  padding-top: 5px;
+  margin-left: 300px;
+  /* width: 33%;
+  margin-left: 1%; */
+}
+
+.ulstyle li a {
+  color: rgb(197, 181, 183);
+}
+li {
+  list-style: none;
+  margin: 0 25px;
+  font-size: 20px;
+}
+.bottom {
+  padding-top: 2%;
+}
+.logout {
+
+    
+  /* border-radius: 20%; */
+  /* width: 80px;
+  height: 35px; */
+  font-size: 20px;
+  margin-left: 250px;
+  margin-top: 20px;
+  /* background-color: rgb(204, 26, 49); */
+  float: right;
+  color:rgb(197, 181, 183); 
+}
+.flexstyle {
+  display: flex;
   justify-content: space-between;
-  z-index: 1000;
-  box-shadow: 0 .5rem 1.5rem rgba(0,0,0,.1);
+
+}
+.navstyle {
+
+  padding: 1% 0;
 }
 
-header .logo{
-  color:#F6EE99;
-  font-size: 2rem;
-  font-weight: bolder;
-}
-
-header .logo i{
-  color:#F6EE99;
-  font-size: 2rem;
+a {
+  text-decoration: none;
 }
 
 header .navbar a{
