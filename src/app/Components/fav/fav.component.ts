@@ -26,12 +26,12 @@ export class FavComponent implements OnInit {
       this.FavtItem = res.data.data;
       //console.log(res.data.data)
       //console.log(this.FavtItem);
-      this.GetRecipeNames();
-      this.GetRecipeImages();
+      this.getProductNames();
+      this.getProductImages();
 
     });
 }
-GetRecipeNames() {
+getProductNames() {
   this.FavtItem.forEach((element) => {
     console.log(element)
     this.fav
@@ -43,7 +43,7 @@ GetRecipeNames() {
       });
   });
 }
-GetRecipeImages() {
+getProductImages() {
   this.FavtItem.forEach((element) => {
     console.log(element)
     this.fav
