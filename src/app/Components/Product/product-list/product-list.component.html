@@ -23,14 +23,23 @@
     <h3 class="sub-heading">Products</h3>
     <!-- <div *ngFor="let y of test">{{y}}</div> -->
 
+
     <main>
-      <section class="dishes" id="dishes" *ngFor="let item of Products">
+      <section class="dishes" id="dishes" *ngFor="let item of Products
+      | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}">
       <div class="box-container">
         <app-product-card [product]="item"></app-product-card>
       </div>
     </section>
 
     </main>
+    <div class="d-flex justify-content-center">
+      <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
+      </pagination-controls>
+    </div>
+
+
+
   </div>
 </body>
 
