@@ -1,27 +1,10 @@
 
     <!-- home section starts  -->
 
-    <section  class="home" id="Imghome">
 
-      <div class=" home-slider">
+    <ng-image-slider [images]="imgCollection" ></ng-image-slider>
 
-              <div class=" slide">
-                  <!-- <div class="content"> -->
-                      <!-- <span> Welcome, Foodies</span>
-                      <h3>Sauce is always here to serve you.</h3>
-                      <p> Sauce is a place that you go to when you can't decide what your next meal. We offer you
-                          delicious recipes and well-known restaurants.
-                      </p>
-                      <a routerLink="/SignUpAs" class="btn">login/register</a> -->
 
-                  <!-- </div> -->
-                  <!-- <div class="image"> -->
-                      <!-- <img src="../../../assets/home-img-2.png" alt=""> -->
-                  <!-- </div>
-              </div> -->
-      </div>
-      </div>
-  </section>
 
   <!-- home section ends -->
 
@@ -31,7 +14,7 @@
   <div style=" background:#eee; ">
       <h3 class="sub-heading">Products </h3>
       <main>
-            
+
 
         <section class="dishes" id="dishes" *ngFor="let item of products ">
         <div >

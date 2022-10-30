@@ -79,12 +79,40 @@ CartItems:addcart[]=[];
 
 
   }
-
+  imgCollection: Array<object> = [
+    {
+      Image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS28ZnmzDRqWQMy3ey0KWdjX5DbiekmmoN5LQ&usqp=CAU',
+      thumbImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS28ZnmzDRqWQMy3ey0KWdjX5DbiekmmoN5LQ&usqp=CAU',
+    },
+    {
+      thumbImage: '../../../assets/Inkedاواني.jpg',
+    },
+    {
+      thumbImage: '../../../assets/ح.jpg',
+    },
+    {
+      thumbImage: '../../../assets//حلل.jpg',
+    },
+    {
+      thumbImage: '../../../assets/Inkeds.jpg',
+    },
+    {
+      thumbImage: '../../../assets/Inkeds.jpg',
+    },
+    {
+      thumbImage: '../../../assets/Inkeds.jpg',
+    },
+    {
+      thumbImage: '../../../assets/Inkeds.jpg',
+    },
+];
 // resturant
 
 getNameres(valu:string){
   this.storeName=valu;
 }
+
+
 
 
 getRestByName(){

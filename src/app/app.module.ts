@@ -25,6 +25,7 @@ import { LoginComponent } from './Components/Account/login/login.component';
 import { OrderComponent } from './Components/Order/order/order.component';
 import { AfterorderComponent } from './Components/Order/afterorder/afterorder.component';
 import { NgxPaginationModule } from 'ngx-pagination';
+import { NgImageSliderModule } from 'ng-image-slider';
 
 
 @NgModule({
@@ -53,6 +54,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
     HttpClientModule,
     FormsModule,
     NgxPaginationModule,
+    NgImageSliderModule,
   ],
   providers: [
     AccountServices,
