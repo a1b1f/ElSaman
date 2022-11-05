@@ -21,7 +21,7 @@ export class StoreService
     }
 
     Show(StoreID:number){
-        return this.Http.get<ResultViewModel>("https://localhost:7129/RecipeAPI/GetAPI?ResturantID="+StoreID);
+        return this.Http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetAPI?ResturantID="+StoreID);
     }
 
 }

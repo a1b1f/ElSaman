@@ -18,12 +18,13 @@ export class ProductCardComponent implements OnInit {
    btn:string="btn";
 
     hidden:string="hidden";
-   AddTOCart(recipeID:number) {
-      this.cart.AddCart(1,recipeID,this.acc.getCurrentUserId()).subscribe(res=>this.product.isInCart=res.data);
-  }
-  AddFav(recipeID:number){
-    this.fav.AddFav(recipeID,this.acc.getCurrentUserId()).subscribe(res=>console.log(res));
+   AddTOCart(ProducrID:number) {
+    console.log(ProducrID)
+      this.cart.AddCart(1,ProducrID,this.acc.getCurrentUserId()).subscribe(res=>this.product.isInCart=res.data);
+    }
 
+    AddTOFav(ProducrID:number){
+    this.fav.AddFav(ProducrID,this.acc.getCurrentUserId()).subscribe(res=>console.log(res));
   }
 
 

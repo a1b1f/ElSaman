@@ -50,7 +50,7 @@ export class OrderComponent implements OnInit {
     this.cart.GetCart().subscribe((res) => {
       this.cartItems = res.data.data;
       this.cartItems.forEach((element) => {
-        this.cart.GetRecipeById(element.recipe_ID).subscribe((res) => {
+        this.cart.GetRecipeById(element.ProductID).subscribe((res) => {
           console.log(res.data.price);
           console.log(element);
 

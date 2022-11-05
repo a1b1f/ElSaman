@@ -5,17 +5,22 @@
    <main class="container" id="container"  >
      <section class="heading">
         <div > Recipe</div>
+        <div>image</div>
         <div>Quantity</div>
         <div>Price</div>
+        <div>Remove</div>
+
+
 
      </section>
       <section *ngFor="let item of CartItem">
 
         <div class="item"> {{item.recipe_Name}}</div>
+        <div class="item">  <img src="https://localhost:7129/{{item.image}}" alt=""></div>
         <div class="item">
-           <i class="fa-solid fa-minus"  (click)="minus(item.recipe_ID)"></i>
+           <i class="fa-solid fa-minus"  (click)="minus(item.ProductID)"></i>
            {{item.qty}}
-            <i class="fa-solid fa-plus"  (click)="plus(item.recipe_ID)"></i>
+            <i class="fa-solid fa-plus"  (click)="plus(item.ProductID)"></i>
         </div>
         <div class="item">{{item.price}}</div>
         <div><i class="fa-solid fa-trash" (click)="remove(item.id)"></i></div>
