@@ -4,19 +4,16 @@
   <!--main-->
    <main class="container" id="container"  >
      <section class="heading">
-        <div > Recipe</div>
-        <div>image</div>
+        <div > Product</div>
+        <div>Image</div>
         <div>Quantity</div>
         <div>Price</div>
         <div>Remove</div>
-
-
-
      </section>
       <section *ngFor="let item of CartItem">
 
-        <div class="item"> {{item.recipe_Name}}</div>
-        <div class="item">  <img src="https://localhost:7129/{{item.image}}" alt=""></div>
+        <div class="item"> {{item.productName}}</div>
+        <div class="item ">  <img src="https://localhost:7129/{{item.imageUrl}}" class="tableImg" alt=""></div>
         <div class="item">
            <i class="fa-solid fa-minus"  (click)="minus(item.ProductID)"></i>
            {{item.qty}}
@@ -27,11 +24,33 @@
       </section>
 
    </main>
-   <button class="btn" routerLink="/Order">Order Now</button>
+   <button class="btn" routerLink="/order">Order Now</button>
    <button class="btn">Empty Cart</button>
 
 
   </body>
+
+  <!-- <table class="table">
+    <thead>
+      <tr>
+        <th scope="col">Product</th>
+        <th scope="col">Image</th>
+        <th scope="col">Quantity</th>
+        <th scope="col">Price</th>
+        <th scope="col">Remove</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let item of CartItem">
+        <td scope="row">{{item.productName}}</td>
+        <td><img src="https://localhost:7129/{{item.imageUrl}}" class="tableImg" alt=""></td>
+        <td>{{item.qty}}</td>
+        <td>{{item.price}}</td>
+        <td><i class="fa-solid fa-trash" (click)="remove(item.id)"></i></td>
+      </tr>
+      
+    </tbody>
+  </table> -->
 
 
 

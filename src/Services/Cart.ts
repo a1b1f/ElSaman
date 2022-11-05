@@ -28,7 +28,7 @@ export class CartServices{
     GetCart(){
         return this.http.get<ResultViewModel>("https://localhost:7129/CartAPI/Get",this.getheader());
     }
-    GetRecipeById(RecipeID:number){
+    GetProductById(RecipeID:number){
         return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetDetails?ID="+RecipeID,this.getheader());
     }
     AddCart(Qty:number,ProducrID:number,userId:string){
@@ -59,6 +59,6 @@ export class addcart{
     qty= 1;
     UserId="";
     price=0;
-    recipe_Name=""
-    image!: "";
+    productName=""
+    imageUrl!: "";
 }

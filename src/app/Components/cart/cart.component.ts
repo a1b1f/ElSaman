@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { AccountServices } from 'src/Services/Account';
 import { addcart, CartServices } from 'src/Services/Cart';
 import { productservice } from 'src/Services/productservice';
+import { OrderServices } from 'src/Services/OrderServices';
+
 
 @Component({
   selector: 'app-cart',
@@ -13,14 +15,17 @@ export class CartComponent implements OnInit {
   constructor(
     private cart: CartServices,
     private productservice: productservice,
+    private order:OrderServices,
     private acc: AccountServices
   ) {}
   ngOnInit(): void {
     this.show();
   }
   show() {
-    this.cart.GetCart().subscribe((res) => {
+    this.order.GetCartByUser(this.acc.getCurrentUserId()).subscribe((res) => {
       this.CartItem = res.data.data;
+      console.log( res.data.data )
+
       console.log( this.CartItem )
       this.getProductNames();
       this.getProductPrices();
@@ -30,29 +35,30 @@ export class CartComponent implements OnInit {
   getProductImage(){
     this.CartItem.forEach((element) => {
       this.cart
-        .GetRecipeById(element.ProductID)
+        .GetProductById(element.ProductID)
         .subscribe((res) =>
          {
-          console.log( res.data)
-          element.image = res.data.image
+         // console.log( res.data)
+          element.imageUrl = res.data.imageUrl
         });
     });
   }
   getProductNames() {
     this.CartItem.forEach((element) => {
+      console.log(element)
       this.cart
-        .GetRecipeById(element.ProductID)
+        .GetProductById(element.ProductID)
         .subscribe((res) =>
          {
           console.log( res.data.nameEN)
-          element.recipe_Name = res.data.nameEN
+          element.productName = res.data.nameEN
         });
     });
     //console.log(this.CartItem);
   }
   getProductPrices() {
     this.CartItem.forEach((element) => {
-      this.cart.GetRecipeById(element.ProductID).subscribe((res) => {
+      this.cart.GetProductById(element.ProductID).subscribe((res) => {
         //console.log(res.data)
         element.price = res.data.price * element.qty;
       });

@@ -1,6 +1,7 @@
 import { HttpClient } from '@angular/common/http';
 import { Component, OnInit } from '@angular/core';
 import { AccountServices } from 'src/Services/Account';
+import { OrderServices } from 'src/Services/OrderServices';
 import { ResultViewModel } from 'src/ViewModels/result-view-model';
 
 @Component({
@@ -11,7 +12,7 @@ import { ResultViewModel } from 'src/ViewModels/result-view-model';
 export class AfterorderComponent implements OnInit {
 
 
-  constructor(private http:HttpClient,private acc:AccountServices) { }
+  constructor(private http:HttpClient,private acc:AccountServices,private order:OrderServices) { }
   orderID:number=0;
 
   ngOnInit(): void {
@@ -19,11 +20,13 @@ export class AfterorderComponent implements OnInit {
     this.getLastOrder();
   }
   getLastOrder(){
-    this.http.get<ResultViewModel>("http://medorafie-001-site1.btempurl.com/OrderAPI/GetLastOrder?userId="+this.acc.getCurrentUserId())
-    .subscribe(res=>{
-      this.orderID=res.data;
-      //Loading.next(false);
-    })
+   
+   this.order.getLastOrder(this.acc.getCurrentUserId()).subscribe(res=>
+    {
+      this.orderID=res.data
+    }
+    
+    )
   }
 
 }

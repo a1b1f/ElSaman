@@ -22,17 +22,18 @@ export class AccountServices{
        return this.Logged.next(status);
     }
 getCurrentUserId():string{
-  return localStorage.getItem("userId")??""
+  // return localStorage.getItem("userId")??""
+  return "0390521a-4c6b-4ad0-a45c-6b0a15167719"
 }
     login(log:LoginViewModel){
-      return this.http.post<ResultViewModel>("http://medorafie-001-site1.btempurl.com/UserAPI/SignIn",log);
+      return this.http.post<ResultViewModel>(environment.apiURl+"UserAPI/SignIn",log);
     }
 
     SignUp(log:SignUpViewModel,Role:string){
       let signup=new SignUpViewModel()
       signup.Role=Role;
 
-      return this.http.post<ResultViewModel>("http://medorafie-001-site1.btempurl.com/UserAPI/SignUp",log);
+      return this.http.post<ResultViewModel>(environment.apiURl+"UserAPI/SignUp",log);
     }
 
     EditProfile(log:EditProfileViewModel,userid:string){
