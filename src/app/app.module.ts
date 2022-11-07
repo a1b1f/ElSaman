@@ -28,6 +28,7 @@ import { NgxPaginationModule } from 'ngx-pagination';
 import { NgImageSliderModule } from 'ng-image-slider';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,

@@ -82,7 +82,7 @@ CartItems:addcart[]=[];
   imgCollection: Array<object> = [
     {
       Image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS28ZnmzDRqWQMy3ey0KWdjX5DbiekmmoN5LQ&usqp=CAU',
-      thumbImage: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS28ZnmzDRqWQMy3ey0KWdjX5DbiekmmoN5LQ&usqp=CAU',
+      thumbImage: '../../../assets/08_Hertitage-Gold-5-piece.jpg'
     },
     {
       thumbImage: '../../../assets/Inkedاواني.jpg',
@@ -91,19 +91,19 @@ CartItems:addcart[]=[];
       thumbImage: '../../../assets/ح.jpg',
     },
     {
-      thumbImage: '../../../assets//حلل.jpg',
+      thumbImage: '../../../assets/حلل.jpg',
     },
     {
-      thumbImage: '../../../assets/Inkeds.jpg',
+      thumbImage: '../../../assets/312822971_659261145821016_5559204330895139212_n.jpg',
     },
     {
-      thumbImage: '../../../assets/Inkeds.jpg',
+      thumbImage: '../../../assets/اوووو.jpg',
     },
     {
-      thumbImage: '../../../assets/Inkeds.jpg',
+      thumbImage: '../../../assets/,[ii.jpg',
     },
     {
-      thumbImage: '../../../assets/Inkeds.jpg',
+      thumbImage: '../../../assets/حلل وجهه.jpg',
     },
 ];
 // resturant
