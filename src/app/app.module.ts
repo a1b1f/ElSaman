@@ -26,12 +26,14 @@ import { OrderComponent } from './Components/Order/order/order.component';
 import { AfterorderComponent } from './Components/Order/afterorder/afterorder.component';
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NgImageSliderModule } from 'ng-image-slider';
+import { OrderServices } from 'src/Services/OrderServices';
 
 
 
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     FavComponent,
     CartComponent,
     HomeComponent,
@@ -62,7 +64,9 @@ import { NgImageSliderModule } from 'ng-image-slider';
     productservice,
    StoreService,
     CartServices,
-    favServices
+    favServices,
+    OrderServices
+
   ],
   bootstrap: [AppComponent]
 })

@@ -29,18 +29,20 @@ export class OrderComponent implements OnInit {
   }
   show() {
     this.order.GetCartByUser(this.acc.getCurrentUserId()).subscribe((res) => {
-      //console.log(res.data.data)
+      // console.log(res.data.data)
       this.orderItems = res.data.data;
+      console.log(this.orderItems);
+
       this.GetRecipeNames();
       this.GetTotalPrice();
     });
   }
   GetRecipeNames() {
     this.orderItems.forEach((element) => {
-      this.cart.GetRecipeById(element.recipe_ID).subscribe((res) => {
+      this.cart.GetProductById(element.productID).subscribe((res) => {
         //console.log(element.recipe_ID)
         //console.log( res.data)
-        element.recipe_Name = res.data.nameEN;
+        element.productName = res.data.nameEN;
       });
     });
     //console.log(this.orderItems);
@@ -50,7 +52,7 @@ export class OrderComponent implements OnInit {
     this.cart.GetCart().subscribe((res) => {
       this.cartItems = res.data.data;
       this.cartItems.forEach((element) => {
-        this.cart.GetRecipeById(element.recipe_ID).subscribe((res) => {
+        this.cart.GetProductById(element.productID!).subscribe((res) => {
           console.log(res.data.price);
           console.log(element);
 
@@ -62,8 +64,8 @@ export class OrderComponent implements OnInit {
 
   OrderNow() {
     var i = 0;
-    this.OrderDetails.orderLists = this.orderItems;
-    console.log(this.OrderDetails.orderLists);
+   // this.OrderDetails.orderItems = this.orderItems;
+    console.log(this.OrderDetails.orderItems);
     this.OrderDetails.userId = this.acc.getCurrentUserId();
 
     this.order.AddOrder(this.OrderDetails).subscribe((res) => {

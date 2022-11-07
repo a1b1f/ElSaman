@@ -38,7 +38,7 @@ CartItems:addcart[]=[];
  btn:string="btn";
   hidden:string="hidden";
  AddTOCart(productID:number) {
-
+console.log(productID)
     this.cart.AddCart(1,productID,this.acc.getCurrentUserId()).subscribe(res=>this.product.isInCart=res.data);
 
 }

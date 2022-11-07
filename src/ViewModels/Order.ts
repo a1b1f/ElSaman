@@ -2,7 +2,7 @@ import { OrderItem } from "./OrderItem";
 
 export class Order {
     id:number=0;
-    orderLists:OrderItem[]=[];
+    orderItems:OrderItem[]=[];
     userId:string="";
     orderDate:Date=new Date();
 }

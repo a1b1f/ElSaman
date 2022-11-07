@@ -35,7 +35,7 @@ getProductNames() {
   this.FavtItem.forEach((element) => {
     console.log(element)
     this.fav
-      .GetRecipeById(element.recipe_ID)
+      .GetRecipeById(element.ProductID)
       .subscribe((res) => {
         //console.log(res);
         (element.recipe_Name = res.data.nameEN)
@@ -47,7 +47,7 @@ getProductImages() {
   this.FavtItem.forEach((element) => {
     console.log(element)
     this.fav
-      .GetRecipeById(element.recipe_ID)
+      .GetRecipeById(element.ProductID)
       .subscribe((res) => {
         console.log(res);
         (element.recipeImg = res.data.imageUrl)

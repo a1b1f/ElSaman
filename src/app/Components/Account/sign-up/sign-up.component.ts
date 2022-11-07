@@ -43,7 +43,7 @@ export class SignUpComponent implements OnInit {
       console.log(res)
       console.log('www')
       if(res.success){
-        this.router.navigateByUrl('UserAPI/SignIn')
+        this.router.navigateByUrl('login')
       }
       else{
         console.log(res)

@@ -22,27 +22,28 @@ export class CartServices{
 
     GetAllCart( ){
 
-        return this.http.get<ResultViewModel>("https://localhost:7129/RecipeAPI/GetAPI",this.getheader());
+        return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetAPI",this.getheader());
     }
 
     GetCart(){
         return this.http.get<ResultViewModel>("https://localhost:7129/CartAPI/Get",this.getheader());
     }
-    GetRecipeById(RecipeID:number){
-        return this.http.get<ResultViewModel>("https://localhost:7129/RecipeAPI/GetDetails?ID="+RecipeID,this.getheader());
+    GetProductById(RecipeID:number){
+        return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetDetails?ID="+RecipeID,this.getheader());
     }
-    AddCart(Qty:number,Recipe_ID:number,userId:string){
+    AddCart(Qty:number,ProducrID:number,userId:string){
+      console.log(ProducrID)
         let cart = new addcart()
         cart.qty=Qty;
-        cart.recipe_ID = Recipe_ID;
+        cart.productID = ProducrID;
         cart.UserId = userId
         return this.http.post<ResultViewModel>("https://localhost:7129/CartAPI/Add",cart,this.getheader());
     }
-    UpdateCart(Qty:number,ID:number,recipeID:number,userId:string){
+    UpdateCart(Qty:number,ID:number,ProductID:number,userId:string){
         let cart = new addcart()
         cart.qty=Qty;
         cart.id = ID;
-        cart.recipe_ID=recipeID
+        cart.productID=ProductID
         cart.UserId = userId
         return this.http.post<ResultViewModel>("https://localhost:7129/CartAPI/Update",cart,this.getheader());
     }
@@ -54,10 +55,10 @@ export class CartServices{
 }
 export class addcart{
     id=0;
-    recipe_ID = 0;
+    productID= 5;
     qty= 1;
     UserId="";
     price=0;
-    recipe_Name=""
-
+    productName=""
+    imageUrl!: "";
 }

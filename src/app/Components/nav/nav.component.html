@@ -3,16 +3,19 @@
     <div class="cont1">
   <div class="brand">
   <img src="../../../assets/ElsmanLogo.jpg" alt="">
-  
+
   <ul class="flexstyle ulstyle">
      <li><a routerLink="/Home">Home</a></li>
       <li><a routerLink="/Product">Products</a></li>
-     <li><a routerLink="/Team">Stores</a></li>
+     <!-- <li><a routerLink="/Team">Stores</a></li> -->
      <li><a routerLink="/Team">About Us</a></li>
+     <li><a routerLink="/Cart">Cart</a></li>
+     <li><a routerLink="/Fav" >Fav</a></li>
+
 
   </ul>
   <div class="bottom">
-    <a routerLink="/SignUpAs" class="logout" href="" target="black" id="login" >Login/SingUp</a>
+    <a  class="logout" href="" target="black" id="login" (click)="LogOut()">Login/SignUp</a>
 
  </div>
   </div>
@@ -23,7 +26,7 @@
 
   </div>
 
-  <div class="icons">
+  <!-- <div class="icons">
       <i class="fas fa-bars" id="menu-bars"></i>
       <i routerLink="/Profile" class="fa-solid fa-user" ></i>
       <i class="fa-solid fa-arrow-right-from-bracket"  ></i>
@@ -32,7 +35,7 @@
       <a routerLink="/favorite"  class="fas fa-heart"></a>
       <i ></i>
 
-  </div>
+  </div> -->
 
 
 

@@ -19,16 +19,21 @@ export class OrderServices{
     }
     constructor(private http:HttpClient){}
     GetCartByUser(userId:string){
-        return this.http.get<ResultViewModel>("http://medorafie-001-site1.btempurl.com/CartAPI/GetByUser?userId="+userId);
+        return this.http.get<ResultViewModel>(environment.apiURl+"CartAPI/GetByUser?userId="+userId);
     }
     AddOrder(OrderDetails:Order){
-        return this.http.post<ResultViewModel>("http://medorafie-001-site1.btempurl.com/OrderAPI/Add",OrderDetails);
+        return this.http.post<ResultViewModel>(environment.apiURl+"OrderAPI/Add",OrderDetails);
     }
     GetAllOrders(userId:string){
-        return this.http.get<ResultViewModel>("http://medorafie-001-site1.btempurl.com/OrderAPI/Get?userId="+userId);
+        return this.http.get<ResultViewModel>(environment.apiURl+"OrderAPI/Get?userId="+userId);
     }
     GetAllOrderLists(OrderID:number){
-        return this.http.get<ResultViewModel>("http://medorafie-001-site1.btempurl.com/OrderListAPI/GetByOrderID?OrderID="+OrderID);
+        return this.http.get<ResultViewModel>(environment.apiURl+"OrderListAPI/GetByOrderID?OrderID="+OrderID);
+    }
+    getLastOrder(userId:string)
+    {
+        return  this.http.get<ResultViewModel>(environment.apiURl+"OrderAPI/GetLastOrder?userId="+userId)
+        
     }
 
 }
