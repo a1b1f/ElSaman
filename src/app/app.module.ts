@@ -32,6 +32,7 @@ import { OrderServices } from 'src/Services/OrderServices';
 @NgModule({
   declarations: [
     AppComponent,
+    LoginComponent,
     FavComponent,
     CartComponent,
     HomeComponent,

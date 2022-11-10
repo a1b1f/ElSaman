@@ -32,7 +32,7 @@ export class OrderComponent implements OnInit {
       // console.log(res.data.data)
       this.orderItems = res.data.data;
       console.log(this.orderItems);
-      
+
       this.GetRecipeNames();
       this.GetTotalPrice();
     });
@@ -52,7 +52,7 @@ export class OrderComponent implements OnInit {
     this.cart.GetCart().subscribe((res) => {
       this.cartItems = res.data.data;
       this.cartItems.forEach((element) => {
-        this.cart.GetProductById(element.ProductID).subscribe((res) => {
+        this.cart.GetProductById(element.productID!).subscribe((res) => {
           console.log(res.data.price);
           console.log(element);
 

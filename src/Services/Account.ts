@@ -22,11 +22,11 @@ export class AccountServices{
        return this.Logged.next(status);
     }
 getCurrentUserId():string{
-  // return localStorage.getItem("userId")??""
-  return "0390521a-4c6b-4ad0-a45c-6b0a15167719"
+   return localStorage.getItem("userId")??""
+  //return "0390521a-4c6b-4ad0-a45c-6b0a15167719"
 }
     login(log:LoginViewModel){
-      return this.http.post<ResultViewModel>(environment.apiURl+"UserAPI/SignIn",log);
+      return this.http.post<ResultViewModel>("https://localhost:7129/UserAPI/SignIn",log);
     }
 
     SignUp(log:SignUpViewModel,Role:string){
@@ -43,7 +43,7 @@ getCurrentUserId():string{
 
 
     LogOut(token:string){
-      return this.http.post<ResultViewModel>("http://medorafie-001-site1.btempurl.com/",{token:token});
+      return this.http.post<ResultViewModel>("https://localhost:7129/UserAPI/SignOut",{token:token});
     }
 
     IsLoggedIn():boolean{

@@ -35,7 +35,7 @@ export class CartServices{
       console.log(ProducrID)
         let cart = new addcart()
         cart.qty=Qty;
-        cart.ProductID = ProducrID;
+        cart.productID = ProducrID;
         cart.UserId = userId
         return this.http.post<ResultViewModel>("https://localhost:7129/CartAPI/Add",cart,this.getheader());
     }
@@ -43,7 +43,7 @@ export class CartServices{
         let cart = new addcart()
         cart.qty=Qty;
         cart.id = ID;
-        cart.ProductID=ProductID
+        cart.productID=ProductID
         cart.UserId = userId
         return this.http.post<ResultViewModel>("https://localhost:7129/CartAPI/Update",cart,this.getheader());
     }
@@ -55,7 +55,7 @@ export class CartServices{
 }
 export class addcart{
     id=0;
-    ProductID= 0;
+    productID= 5;
     qty= 1;
     UserId="";
     price=0;
