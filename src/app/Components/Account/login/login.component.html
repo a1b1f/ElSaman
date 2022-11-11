@@ -59,7 +59,7 @@
 
 
 
-	<form class="login-form" [formGroup]="form"method="post">
+	<!-- <form class="login-form" [formGroup]="form"method="post">
 		<div class="login-wrap">
 			<div class="login-html">
 				<input id="tab-1" type="radio" name="tab" class="sign-in" checked>
@@ -103,9 +103,55 @@
 	</form>
 
 	<script src="~/Content/JS/vendor.js"></script>
-	<script src="~/Content/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
-
-
-</body>
-
-</html>
+	<script src="~/Content/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script> -->
+		<div class="container">
+			<input type="checkbox" id="flip" hidden>
+		   <div class="cover">
+			   <div class="front">
+				   <img src="../../../../assets/16.jpg" alt="">      
+	   
+			   </div>
+		   </div>
+			<form action="#">
+			<div class="form-content" >
+			   <div class="login-form">
+				   <h3 style="text-align: center; color: white; ">Welcome Back</h3>
+				   <div class="title">
+					login
+				   </div>
+				   <div class="input-boxes">
+				  <div class="input-box">
+					  <img src="../../../../assets/security.png" style="width: 45px;">
+					  <input type="text" placeholder="User Name" required>
+				  </div>
+				  <div class="input-box">
+					  <img src="../../../../assets/icon.png"style="width: 45px;">
+					  <input type="password" placeholder="Password" required>
+				  </div>
+				  <div class="text"><a href="#">Forgot password?</a></div>
+				  <div class=" button input-box">
+					  <input type="submit" value="log in" >
+				  </div>
+				  <div class="text sign-up-text">Don't have an account?<label for="flip">Signup now</label>
+	   
+				  </div>
+				   </div>
+	   
+			   </div>
+	   
+	   
+			   
+	   
+			  </div>   
+			
+				
+			</form>
+		
+		</div>
+	   
+	   
+	   
+	   
+		  
+	   </body>
+	   </html>

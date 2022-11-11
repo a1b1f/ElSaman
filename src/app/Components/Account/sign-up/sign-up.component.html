@@ -74,7 +74,7 @@
 </html> -->
 
 <body>
-	<form class="login-form" enctype="multipart/form-data" method="post" [formGroup]="form">
+	<!-- <form class="login-form" enctype="multipart/form-data" method="post" [formGroup]="form">
 		<div class="login-wrap">
 			<div class="login-html">
 				<input id="tab-2" type="radio" name="tab" class="sign-in">
@@ -83,7 +83,6 @@
 				<label style="color:white;" for="tab-1" class="tab"> <a asp-action="SignUp"
 						asp-controller="Users">SignUp</a>
 				</label>
-				<!-- <div class="sign-up-htm"> -->
 				<div class="group">
 					<input id="user" type="text" class="input" formControlName="NameEN" placeholder="English Name">
 					<br>
@@ -96,13 +95,7 @@
 					<br>
 					<span style="color:indianred" *ngIf="form.controls['NameAR'].hasError('required')">Required Arabic Name</span>
 				</div>
-				<!-- <div class="group">
-				<br>
-				<input id="user" type="text" class="input" formControlName="Role" placeholder="Role">
-				<br>
-        <span style="color:indianred" *ngIf="form.controls['Role'].hasError('required')">Required Role</span>
-	</div> -->
-
+			
 		<br>
 				<div class="group">
 					<input  id="user"  class="input" type="text" formControlName="Phone" placeholder="Phone">
@@ -164,4 +157,49 @@
 	<script src="~/Content/JS/vendor.js"></script>
 
 	<script src="~/Content/lib/jquery-ajax-unobtrusive/jquery.unobtrusive-ajax.js"></script>
+</body> -->
+
+<form action="#">
+	<div class="form-content" >
+	   <div class="login-form">
+		   <h3 style="text-align: center; color: white; ">Welcome Back</h3>
+<div class="SignUp-form">
+	<h4 style="text-align: center; color: rgb(234, 247, 250); ">Welcome To The Website</h4>
+   <div class="title">
+	   Sign Up
+   </div>
+   <div class="input-boxes">
+  <div class="input-box">
+   <img src="../../../../assets/security.png" style="width: 35px;" >
+   <input type="text" placeholder="User Name" required>
+</div>
+<div class="input-box">
+<img src="../../../../assets/5.png" style="width: 35px;" >
+<input type="email" placeholder="Email" required>
+</div>
+  <div class="input-box">
+	  <img src="../../../../assets/icon.png" style="width: 35px;">
+	  <input type="password" placeholder="Password" required>
+  </div>
+  <div class=" button input-box">
+	  <input type="submit" value="Register" >
+  </div>
+  <div class="text sign-up-text">Already have an account?<label for="flip">Login now</label>
+
+   </div>
+
+</div>   
+</div>     
+	   </div>
+	</div>
+ 
+</form>
+
 </body>
+
+
+
+
+
+
+</html>
