@@ -38,7 +38,7 @@ getCurrentUserId():string{
 
     EditProfile(log:EditProfileViewModel,userid:string){
       let Editprofile=new EditProfileViewModel()
-      return this.http.post<ResultViewModel>("http://medorafie-001-site1.btempurl.com/UserAPI/Edit",log);
+      return this.http.post<ResultViewModel>("https://localhost:7129/UserAPI/Edit",log);
     }
 
 
@@ -54,6 +54,6 @@ getCurrentUserId():string{
       return false;
   }
   GetUserInfo(ID:string ){
-    return this.http.get<ResultViewModel>("http://medorafie-001-site1.btempurl.com/UserAPI/GetById?ID="+ID)}
+    return this.http.get<ResultViewModel>("https://localhost:7129/UserAPI/GetById?ID="+ID)}
 
 }

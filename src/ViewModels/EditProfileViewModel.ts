@@ -5,4 +5,5 @@ export class EditProfileViewModel{
   NameEN:string='';
   Role:string='';
   phone:number=0;
+  password:Number=0;
 }

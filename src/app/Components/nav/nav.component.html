@@ -2,22 +2,25 @@
   <nav class="navs navstyle">
     <div class="cont1">
   <div class="brand">
-  <img src="../../../assets/ElsmanLogo.jpg" alt="">
 
-  <ul class="flexstyle ulstyle">
-     <li><a routerLink="/Home">Home</a></li>
-      <li><a routerLink="/Product">Products</a></li>
+     <a routerLink="/Home">Home</a>
+      <a routerLink="/Product">Products</a>
      <!-- <li><a routerLink="/Team">Stores</a></li> -->
-     <li><a routerLink="/Team">About Us</a></li>
-     <li><a routerLink="/Cart">Cart</a></li>
-     <li><a routerLink="/Fav" >Fav</a></li>
+     <a routerLink="/Team">About Us</a>
+     <a routerLink="/Cart">Cart</a>
+     <a routerLink="/Fav" >Fav</a>
 
 
-  </ul>
-  <div class="bottom">
-    <a  class="logout" href="" target="black" id="login" (click)="LogOut()">Login/SignUp</a>
+  <div class="icons">
+    <i class="fas fa-bars" id="menu-bars"></i>
+    <i routerLink="/Profile" class="fa-solid fa-user" *ngIf="isloog"></i>
+    <i class="fa-solid fa-arrow-right-from-bracket" (click)="LogOut()" *ngIf="isloog"></i>
+    <i class="fa-solid fa-door-open"  *ngIf="!isloog" routerLink="/UserAPI/SignIn"></i>
+    <a routerLink="/Cart" class="fas fa-shopping-cart"></a>
+    <a routerLink="/favorite"  class="fas fa-heart"></a>
+    <i ></i>
 
- </div>
+</div>
   </div>
     </div>
   </nav>
@@ -25,25 +28,3 @@
   <div>
 
   </div>
-
-  <!-- <div class="icons">
-      <i class="fas fa-bars" id="menu-bars"></i>
-      <i routerLink="/Profile" class="fa-solid fa-user" ></i>
-      <i class="fa-solid fa-arrow-right-from-bracket"  ></i>
-      <i class="fa-solid fa-door-open"   routerLink="/UserAPI/SignIn"></i>
-      <a routerLink="/Cart" class="fas fa-shopping-cart"></a>
-      <a routerLink="/favorite"  class="fas fa-heart"></a>
-      <i ></i>
-
-  </div> -->
-
-
-
-<!-- header section ends-->
-<!-- search form  -->
-
-<form action="" id="search-form">
-  <input type="text" placeholder="search here..." name="" id="search-box">
-  <label for="search-box" class="fas fa-search"></label>
-  <i class="fas fa-times" id="close"></i>
-</form>

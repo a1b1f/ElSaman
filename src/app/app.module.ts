@@ -27,6 +27,7 @@ import { AfterorderComponent } from './Components/Order/afterorder/afterorder.co
 import { NgxPaginationModule } from 'ngx-pagination';
 import { NgImageSliderModule } from 'ng-image-slider';
 import { OrderServices } from 'src/Services/OrderServices';
+import { ProfileComponent } from './Components/Account/profile/profile.component';
 
 
 
@@ -47,6 +48,7 @@ import { OrderServices } from 'src/Services/OrderServices';
     SignUpComponent,
     OrderComponent,
     AfterorderComponent,
+    ProfileComponent,
 
   ],
   imports: [
