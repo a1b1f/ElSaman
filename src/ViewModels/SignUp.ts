@@ -3,9 +3,10 @@ export class SignUpViewModel{
   email:string='';
   nameAR:string='';
   nameEN:string='';
-  Password:number=0;
+  password:number=0;
   Role:string='';
   phone:number=0;
+  image:string="";
   registerDate:Date=new Date();
 
 }

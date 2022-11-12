@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { AccountServices } from 'src/Services/Account';
 import { SignUpViewModel } from 'src/ViewModels/SignUp';
@@ -10,50 +10,55 @@ import { SignUpViewModel } from 'src/ViewModels/SignUp';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
+  formSubmitted?:boolean;
 
   constructor(private builder:FormBuilder,private acc:AccountServices,private router:Router) { }
-  form:FormGroup=new FormGroup([]);
+  signUpForm:FormGroup=new FormGroup(
+    {
+      nameAr:new FormControl('',[Validators.required,Validators.minLength(1)]),
+      email:new FormControl('',Validators.email),
+      password:new FormControl('',Validators.required),
+      ConfirmPassword:new FormControl('',Validators.required),
+      image:new FormControl(''),
+      phone:new FormControl('',[Validators.required,Validators.maxLength(11)]),
+    });
 
   ngOnInit(): void {
-    this.form=this.builder.group(
-      {
-        NameEN:['',[Validators.required]],
-        NameAR:['',[Validators.required]],
-        Role:['',[Validators.required]],
-        Email:['',[Validators.required]],
-        Password:['',[Validators.required]],
-        ConfirmPassword:['',[Validators.required],],
-        Phone:['',[Validators.required],Validators.maxLength(11)],
-    });
   }
 
 
   add(){
+    this.formSubmitted=true;
     let SignUP =new SignUpViewModel();
-    SignUP.nameEN=this.form.value["NameEN"];
-    SignUP.nameAR=this.form.value["NameAR"];
+    SignUP.nameEN=this.signUpForm.value["nameEn"];
+    SignUP.nameAR=this.signUpForm.value["nameAr"];
     SignUP.Role="User";
-    SignUP.email=this.form.value["Email"];
-    SignUP.Password=this.form.value["Password"];
-    SignUP.ConfirnmPassword=this.form.value["ConfirmPassword"];
-    SignUP.phone=this.form.value["Phone"];
-    console.log(SignUP);
+    SignUP.email=this.signUpForm.value["email"];
+    SignUP.password=this.signUpForm.value["password"];
+    SignUP.ConfirnmPassword=this.signUpForm.value["ConfirmPassword"];
+    SignUP.phone=this.signUpForm.value["phone"];
+    SignUP.image=this.signUpForm.value["image"];
+    console.log(this.signUpForm)
 
-    this.acc.SignUp(SignUP,'Admin').subscribe(res=>{
-      console.log(res)
-      console.log('www')
-      if(res.success){
-        this.router.navigateByUrl('login')
-      }
-      else{
+    if(this.signUpForm.valid){
+      console.log(SignUP);
+
+      this.acc.SignUp(SignUP,'User').subscribe(res=>{
         console.log(res)
-        console.log('res')
-        alert('Try again!!!!!!!')
-        console.log(this.form.errors)
-      }
-    },err=>{
-      console.log(err);
-    })
+        console.log('www')
+        if(res.success){
+          this.router.navigateByUrl('login')
+        }
+        else{
+          console.log(res)
+          console.log('res')
+          alert('Try again!!!!!!!')
+          console.log(this.signUpForm.errors)
+        }
+      },err=>{
+        console.log(err);
+      })
+    }
   }
 
   onPasswordChange() {
@@ -65,11 +70,13 @@ export class SignUpComponent implements OnInit {
   }
 
   get password() {
-    return this.form.controls['Password'];
+    return this.signUpForm.controls['password'];
   }
 
   get confirm_password() {
-    return this.form.controls['ConfirmPassword'];
+    return this.signUpForm.controls['ConfirmPassword'];
   }
+
+
 
 }

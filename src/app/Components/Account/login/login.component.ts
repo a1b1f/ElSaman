@@ -10,21 +10,21 @@ import { LoginViewModel } from 'src/ViewModels/Login';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
-  form:FormGroup=new FormGroup([]);
+  registerForm:FormGroup=new FormGroup([]);
   constructor(private builder:FormBuilder,private acc:AccountServices,private router:Router) { }
   ngOnInit(): void {
-    this.form=this.builder.group(
+    this.registerForm=this.builder.group(
       {
-      Email:['',[Validators.required,Validators.email]],
-      Password:['',[Validators.required]]
+      email:['',[Validators.required,Validators.email]],
+      password:['',[Validators.required]]
     },
     )
 
   }
   add(){
     let log =new LoginViewModel();
-    log.Email=this.form.value["Email"]
-    log.Password=this.form.value["Password"]
+    log.Email=this.registerForm.value["email"]
+    log.Password=this.registerForm.value["password"]
     this.acc.login(log).subscribe(res=>{
       if(res.success){
         console.log(res.data);

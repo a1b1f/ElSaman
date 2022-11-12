@@ -108,11 +108,11 @@
 			<input type="checkbox" id="flip" hidden>
 		   <div class="cover">
 			   <div class="front">
-				   <img src="../../../../assets/16.jpg" alt="">      
-	   
+				   <img src="../../../../assets/16.jpg" alt="">
+
 			   </div>
 		   </div>
-			<form action="#">
+			<form action="#" [formGroup]="registerForm" method="post">
 			<div class="form-content" >
 			   <div class="login-form">
 				   <h3 style="text-align: center; color: white; ">Welcome Back</h3>
@@ -122,36 +122,35 @@
 				   <div class="input-boxes">
 				  <div class="input-box">
 					  <img src="../../../../assets/security.png" style="width: 45px;">
-					  <input type="text" placeholder="User Name" required>
+					  <input type="text" placeholder="رقم التليفوون" formControlName="email">
 				  </div>
 				  <div class="input-box">
 					  <img src="../../../../assets/icon.png"style="width: 45px;">
-					  <input type="password" placeholder="Password" required>
+					  <input type="password" placeholder="كلمه المرور" formControlName="password">
 				  </div>
-				  <div class="text"><a href="#">Forgot password?</a></div>
 				  <div class=" button input-box">
-					  <input type="submit" value="log in" >
+					  <input type="submit" value="log in" (click)="add()">
 				  </div>
 				  <div class="text sign-up-text">Don't have an account?<label for="flip">Signup now</label>
-	   
+
 				  </div>
 				   </div>
-	   
+
 			   </div>
-	   
-	   
-			   
-	   
-			  </div>   
-			
-				
+
+
+
+
+			  </div>
+
+
 			</form>
-		
+
 		</div>
-	   
-	   
-	   
-	   
-		  
+
+
+
+
+
 	   </body>
 	   </html>
