@@ -56,7 +56,7 @@ export class OrderComponent implements OnInit {
           console.log(res.data.price);
           console.log(element);
 
-          this.TotalPrice = this.TotalPrice + (res.data.price * element.qty);
+          this.TotalPrice = this.TotalPrice + (res.data.price * element.qty+50);
         });
       });
     });
