@@ -16,22 +16,41 @@
   height: 6vh;
 }
 
-.brand {
+.brand a{
 
-  width: 45px;
+  width: 70px;
   height: 45px;
-  display: flex;
-margin-left: 20px;
+font-size: 20px ;
+margin-left: 70px;
   margin-top: 35;
   border-radius: 50%;
+  color: #eee;
 
 }
-
+i#menu-bars.fas.fa-bars{
+display: none;
+}
+ i{
+  width: 40px;
+  height: 45px;
+font-size: 20px ;
+margin-left: 10px;
+  margin-top: 35;
+  border-radius: 50%;
+  color: #eee; 
+}
+i.fa-solid.fa-user{
+  margin-left: 300px;
+}
+a#heart.fas.fa-heart:hover{
+  
+color: red;
+}
 .brand img {
   border-radius: 50%;
 }
 
-.ulstyle {
+.ulstyle a{
   margin-left: 300px;
   /* width: 33%;
   margin-left: 1%; */
