@@ -21,7 +21,7 @@ const routes: Routes = [
   {path:"Product/Card",component:ProductCardComponent},
   {path:"Product/details/:id",component:ProductDetailsComponent},
   {path:"Cart",component:CartComponent},
-  {path:"Fav",component:FavComponent},
+  {path:"favorite",component:FavComponent},
   {path:"Team",component:OurTeamComponent},
   {path:"order",component:OrderComponent,canActivate:[AuthGuard]},
   {path:"order/sent",component:AfterorderComponent},

@@ -11,7 +11,12 @@
      </section>
       <section *ngFor="let item of FavtItem">
 
-        <div class="item"> {{item.recipe_Name}}</div>
+        <div class="item"> {{item.productName}}</div>
+        <div class="item">
+           <img src="https://localhost:7129/{{item.productImg}}">
+          
+          </div>
+
 
 
       </section>
