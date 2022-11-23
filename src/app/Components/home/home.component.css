@@ -15,13 +15,14 @@ body{
   background: #333;
 }
 
-section{
+/* section{
   padding:2px 9%;
-}
+} */
 section img{
   width:100%;
   margin-bottom: 30px;
-  margin-top: 30px;
+  /* margin-top: 30px; */
+  height: 100vh;
  
 }
 section:nth-child(even){
