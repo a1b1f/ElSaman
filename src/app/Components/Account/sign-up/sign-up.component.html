@@ -30,9 +30,17 @@
    <div class="input-boxes">
 <div class="input-box">
   <img src="../../../../assets/security.png" style="width: 35px;" >
-  <input type="text" placeholder=" الاسم بالكامل" formControlName="nameAr" >
+  <input type="text" placeholder=" الاسم باللغةالعربية" formControlName="nameAr" >
   <br>
 	<span style="color:indianred" *ngIf="formSubmitted &&signUpForm.controls['nameAr'].hasError('required')">حقل مطلوب</span>
+
+</div>
+
+<div class="input-box">
+  <img src="../../../../assets/security.png" style="width: 35px;" >
+  <input type="text" placeholder=" الاسم باللغة الإنجليزية" formControlName="nameEn" >
+  <br>
+	<span style="color:indianred" *ngIf="formSubmitted &&signUpForm.controls['nameEn'].hasError('required')">حقل مطلوب</span>
 
 </div>
 <div class="input-box">

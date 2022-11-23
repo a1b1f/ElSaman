@@ -31,9 +31,9 @@ export class favServices{
     GetRecipeById(RecipeID:number){
         return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetDetails?ID="+RecipeID,this.getheader());
     }
-    AddFav(Recipe_ID:number,userId:string){
+    AddFav(productID:number,userId:string){
         let fav = new addfav()
-        fav.ProductID = Recipe_ID;
+        fav.productID = productID;
         fav.UserId = userId
         return this.http.post<ResultViewModel>("https://localhost:7129/FavAPI/Add",fav,this.getheader());
     }
@@ -47,7 +47,7 @@ export class favServices{
 
 export class addfav{
   fav_ID=0;
-  ProductID = 0;
+  productID = 0;
   qty= 1;
   UserId="";
   price=0;
