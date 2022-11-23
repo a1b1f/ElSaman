@@ -51,7 +51,7 @@ export class addfav{
   qty= 1;
   UserId="";
   price=0;
-  recipe_Name="";
-  recipeImg=""
+  product_Name="";
+  productImg=""
 
 }

@@ -6,4 +6,5 @@ export class OrderItem{
   productName:string="";
   orderID:number=0;
   orderItemID:number=0;
+  imageUrl!: "";
 }

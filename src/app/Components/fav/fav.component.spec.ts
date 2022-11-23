@@ -21,3 +21,4 @@ describe('FavComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+

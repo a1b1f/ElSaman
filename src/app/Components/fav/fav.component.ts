@@ -38,7 +38,7 @@ getProductNames() {
       .GetRecipeById(element.ProductID)
       .subscribe((res) => {
         //console.log(res);
-        (element.recipe_Name = res.data.nameEN)
+        (element.product_Name = res.data.nameEN)
 
       });
   });
@@ -50,12 +50,12 @@ getProductImages() {
       .GetRecipeById(element.ProductID)
       .subscribe((res) => {
         console.log(res);
-        (element.recipeImg = res.data.imageUrl)
+        (element.productImg = res.data.imageUrl)
 
       });
   });
 }
-remove(FavID: number,recipe_ID:number) {
+remove(FavID: number,productID:number) {
   this.fav.RempveFav(FavID).subscribe((res) =>{
     console.log(res);
     this.show()});

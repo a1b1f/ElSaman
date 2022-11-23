@@ -291,7 +291,6 @@ body {
 }
 .btn:hover{
     background: #fff;
-    letter-spacing: 1px;
     color: rgb(168, 20, 20);
 }
 

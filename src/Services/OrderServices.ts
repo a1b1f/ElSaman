@@ -22,6 +22,7 @@ export class OrderServices{
         return this.http.get<ResultViewModel>(environment.apiURl+"CartAPI/GetByUser?userId="+userId);
     }
     AddOrder(OrderDetails:Order){
+        
         return this.http.post<ResultViewModel>(environment.apiURl+"OrderAPI/Add",OrderDetails);
     }
     GetAllOrders(userId:string){
@@ -35,5 +36,7 @@ export class OrderServices{
         return  this.http.get<ResultViewModel>(environment.apiURl+"OrderAPI/GetLastOrder?userId="+userId)
         
     }
-
 }
+   
+
+

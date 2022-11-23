@@ -17,7 +17,7 @@ section {
 }
 .heading
 {
-  background-color: #143444;
+  background-color: rgba(0, 0, 0, 0.863);
   font-size: 1.5rem;
   color:#Fff
 }
@@ -43,7 +43,7 @@ main{
   display: inline-block;
   font-size: 15px;
   color:#fff;
-  background: #143444;
+  background: rgba(0, 0, 0, 0.884);
   border-radius: 5px;
   cursor: pointer;
   padding:10px 25px;
@@ -53,9 +53,9 @@ main{
   margin-left: 20px;
 }
 .btn:hover{
-  background: #F6EE99;;
+  background: rgba(243, 4, 4, 0.932);
   letter-spacing: 1px;
-  color: #143444;
+  color: #Fff;
 
 }
 .tableImg{
