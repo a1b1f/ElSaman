@@ -34,7 +34,7 @@ export class ProductCardComponent implements OnInit {
       private fav:favServices) {   }
 
     ngOnInit(): void {
-      console.log(this.product)
+     // console.log(this.product)
     }
 
 }

@@ -28,7 +28,7 @@ export class ProductListComponent implements OnInit {
   fetchData() {
     //console.log(this.tableSize,this.page)
     this.ProductService.getProduct(this.tableSize,this.page).subscribe(res => {
-      console.log(res.data.data)
+     // console.log(res.data.data)
 
       let response = res.data as PagingViewModel
       this.page = response.pageIndex;
@@ -103,7 +103,7 @@ export class ProductListComponent implements OnInit {
         else {
         this.ProductService.getByCategory(c.nameEN).subscribe(res=>
           {
-            console.log(res);
+            //console.log(res);
             this.unfiltered=res.data.data
             this.Products.push(...this.unfiltered.filter(i=>  i.nameEN.includes(this.productName)))
           })

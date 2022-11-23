@@ -49,7 +49,7 @@ export class OrderComponent implements OnInit {
   }
   price: number = 0;
   GetTotalPrice() {
-    this.cart.GetCart().subscribe((res) => {
+    this.order.GetCartByUser(this.acc.getCurrentUserId()).subscribe((res) => {
       this.cartItems = res.data.data;
       this.cartItems.forEach((element) => {
         this.cart.GetProductById(element.productID!).subscribe((res) => {

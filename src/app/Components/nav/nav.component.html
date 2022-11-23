@@ -7,17 +7,14 @@
       <a routerLink="/Product">Products</a>
      <!-- <li><a routerLink="/Team">Stores</a></li> -->
      <a routerLink="/Team">About Us</a>
-     <a routerLink="/Cart">Cart</a>
-     <a routerLink="/Fav" >Fav</a>
-
 
 
     <i class="fas fa-bars" id="menu-bars"></i>
     <i routerLink="/profile" class="fa-solid fa-user" *ngIf="isloog"></i>
     <i class="fa-solid fa-arrow-right-from-bracket" (click)="LogOut()" *ngIf="isloog"></i>
-    <i class="fa-solid fa-door-open"  *ngIf="!isloog" routerLink="/UserAPI/SignIn"></i>
+    <i class="fa-solid fa-door-open"  *ngIf="!isloog" routerLink="/login"></i>
     <a routerLink="/Cart" class="fas fa-shopping-cart"></a>
-    <a routerLink="/Fav"  class="fas fa-heart" id="heart"></a>
+    <a routerLink="/favorite"  class="fas fa-heart" id="heart"></a>
     <i ></i>
 
 
