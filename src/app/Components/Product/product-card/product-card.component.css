@@ -179,9 +179,9 @@ body {
     min-height: 100vh;
     display: flex;
     justify-content: center;
-    align-items: center;   
+    align-items: center;
     font-family: sans-serif;
-    background-color: #f1f1f1; 
+    background-color: #f1f1f1;
 }
 
 .container {
@@ -223,7 +223,7 @@ body {
 }
 
 .container .card .face.face1 {
-    position: relative;    
+    position: relative;
     justify-content: center;
     align-items: center;
     z-index: 1;
@@ -274,7 +274,7 @@ body {
     font-size: 24px;
     text-align: center;
     color: #414141;
-} 
+}
 #price{
     margin:0 ;
     text-align: center;
@@ -287,7 +287,8 @@ body {
     background: rgb(187, 29, 29);
     border-radius: 5px;
     cursor: pointer;
-    padding:10px 25px;
+    padding:11px 35px;
+    margin-left: 15px
 }
 .btn:hover{
     background: #fff;

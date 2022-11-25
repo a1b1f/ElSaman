@@ -25,8 +25,10 @@
           <div class="content">
             <h3 style="margin-top:45px ;">{{product.nameEN}}</h3>
             <div id="price" >{{product.price}} EGP</div>
-            <button  class="btn" (click)="AddTOCart(product.id)" >add to cart</button>
-            <button  class="btn" (click)="AddTOFav(product.id)" >add to Fav</button>
+
+
+            <button style="margin-left: 15px" class="btn" (click)="AddTOCart(product.id)" ><a class="fas fa-shopping-cart"></a></button>
+            <button  class="btn" (click)="AddTOFav(product.id)" ><a class="fas fa-heart" id="heart"></a></button>
           </div>
       </div>
   </div>
