@@ -27,8 +27,8 @@
             <div id="price" >{{product.price}} EGP</div>
 
 
-            <button style="margin-left: 15px" class="btn" (click)="AddTOCart(product.id)" ><a class="fas fa-shopping-cart"></a></button>
-            <button  class="btn" (click)="AddTOFav(product.id)" ><a class="fas fa-heart" id="heart"></a></button>
+           <a style="margin-left: 15px" id="cart" (click)="AddTOCart(product.id)" class="fas fa-shopping-cart"></a>
+            <a class="btn" (click)="AddTOFav(product.id)" class="fas fa-heart" id="heart"></a>
           </div>
       </div>
   </div>

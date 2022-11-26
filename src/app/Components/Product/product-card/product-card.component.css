@@ -280,18 +280,31 @@ body {
     text-align: center;
 }
 
-.btn{
+a#cart{
     display: inline-block;
-    font-size: 15px;
-    color:#fff;
-    background: rgb(187, 29, 29);
+    font-size: 25px;
+    color:rgb(58, 50, 50);
+    /* background: rgb(187, 29, 29); */
     border-radius: 5px;
     cursor: pointer;
-    padding:11px 35px;
+    padding:10px 15px;
     margin-left: 15px
 }
-.btn:hover{
+a#cart:hover{
+    background: #fff;
+    color: rgb(23, 90, 179);
+}
+a#heart{
+    display: inline-block;
+    font-size: 25px;
+    color:rgb(58, 50, 50);
+    /* background: rgb(187, 29, 29); */
+    border-radius: 5px;
+    cursor: pointer;
+    /* padding:5px 15px; */
+    margin-left: 10px
+}
+a#heart:hover{
     background: #fff;
     color: rgb(168, 20, 20);
 }
-
