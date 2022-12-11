@@ -4,28 +4,32 @@
   <!--main-->
    <main class="container" id="container"  >
      <section class="heading">
-        <div > Product</div>
-        <div>Image</div>
-        <div>Quantity</div>
-        <div>Price</div>
-        <div>Remove</div>
+        <div>حذف</div>
+        <div>السعر</div>
+        <div>صورة</div>
+        <div>الكمية</div>
+        <div > المنتج</div>
+       
+
      </section>
       <section *ngFor="let item of CartItem">
 
-        <div class="item"> {{item.productName}}</div>
+      
+        <div><i class="fa-solid fa-trash" (click)="remove(item.id)"></i></div>
+        <div class="item">{{item.price}}</div>
         <div class="item ">  <img src="https://localhost:7129/{{item.imageUrl}}" class="tableImg" alt=""></div>
         <div class="item">
-           <i class="fa-solid fa-minus"  (click)="minus(item.productID!)"></i>
-           {{item.qty}}
-            <i class="fa-solid fa-plus"  (click)="plus(item.productID!)"></i>
-        </div>
-        <div class="item">{{item.price}}</div>
-        <div><i class="fa-solid fa-trash" (click)="remove(item.id)"></i></div>
+          <i class="fa-solid fa-minus"  (click)="minus(item.productID!)"></i>
+          {{item.qty}}
+           <i class="fa-solid fa-plus"  (click)="plus(item.productID!)"></i>
+       </div>
+        <div class="item"> {{item.productName}}</div>
+       
       </section>
 
    </main>
-   <button class="btn" routerLink="/order">Order Now</button>
-   <button class="btn">Empty Cart</button>
+   <button class="btn" routerLink="/order">أطلب الآن</button>
+   <button class="btn">افراغ السلة</button>
 
 
   </body>

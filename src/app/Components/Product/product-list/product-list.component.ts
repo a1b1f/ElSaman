@@ -41,7 +41,7 @@ export class ProductListComponent implements OnInit {
           console.log(res)
           this.Categories=res.data ;
           var c = new Category();
-          c.nameEN="All";
+          c.nameAR="الكل";
           this.Categories.push(c);
         })
     })
@@ -81,7 +81,7 @@ export class ProductListComponent implements OnInit {
   }
   getByCategory(cName:string){
     this.Categories.filter(i=>{
-      if(i.nameEN==cName)
+      if(i.nameAR==cName)
       {
         i.isChecked=!i.isChecked
       }
@@ -90,22 +90,22 @@ export class ProductListComponent implements OnInit {
     this.Categories.forEach(c=>{
       if(c.isChecked==true )
       {
-        if(c.nameEN=="All"){
+        if(c.nameAR=="الكل"){
           this.ProductService.getProduct(this.tableSize,this.page).subscribe(res => {
             let response = res.data as PagingViewModel
             this.page = response.pageIndex;
             this.tableSize = response.pageSize;
             this.count = response.count;
             this.Products = response.data as Product[];
-            this.Products= this.Products.filter(i=>  i.nameEN.includes(this.productName))
+            this.Products= this.Products.filter(i=>  i.nameAR.includes(this.productName))
           })
         }
         else {
-        this.ProductService.getByCategory(c.nameEN).subscribe(res=>
+        this.ProductService.getByCategory(c.nameAR).subscribe(res=>
           {
             //console.log(res);
             this.unfiltered=res.data.data
-            this.Products.push(...this.unfiltered.filter(i=>  i.nameEN.includes(this.productName)))
+            this.Products.push(...this.unfiltered.filter(i=>  i.nameAR.includes(this.productName)))
           })
         }
 

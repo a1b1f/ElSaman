@@ -2,13 +2,13 @@
   <!-- order section starts  -->
   <section class="order" id="order" >
   
-    <h3 class="sub-heading"> order now </h3>
-    <h1 class="heading"> free and fast </h1>
+    <h3 class="sub-heading"> اطلب الان </h3>
+    <h1 class="heading"> مجاني وسريع </h1>
 
     <form action="">
         <div class="inputBox">
             <div class="input">
-                <span>your order</span>
+                <span>طلبك</span>
                 <div *ngFor="let item of orderItems">
                   <div>{{item.productName}}</div>
                 </div>
@@ -27,7 +27,7 @@
         </div>
         
 
-        <button class="btn" (click)="OrderNow()">Order Now</button>
+        <button class="btn" (click)="OrderNow()">اطلب الان</button>
 
     </form>
 

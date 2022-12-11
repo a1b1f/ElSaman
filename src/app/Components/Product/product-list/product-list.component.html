@@ -8,10 +8,11 @@
       (keyup)="getProductByName()"> <i
         class="fa-solid fa-magnifying-glass" (click)="getProductByName()"></i>
     </div>
-    <h5> Categories</h5>
+    <h5> المنتجات</h5>
     <div class="check" *ngFor="let item of Categories">
-      <input type="checkbox" [value]="item.nameEN" #input (change)="getByCategory(input.value)"  />
-      <label> {{item.nameEN}}</label>
+      <label> {{item.nameAR}}</label>
+      <input type="checkbox" [value]="item.nameAR" #input (change)="getByCategory(input.value)"  />
+
     <hr style="width:50%;text-align:center;color: black;">
 
     </div>
@@ -20,7 +21,7 @@
   </aside>
   <!--Recipes-->
   <div>
-    <h3 class="sub-heading">Products</h3>
+    <h3 class="sub-heading">المنتجات</h3>
     <!-- <div *ngFor="let y of test">{{y}}</div> -->
 
 

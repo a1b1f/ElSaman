@@ -74,24 +74,33 @@ aside{
     height: 100%;
     font-size: 20px;
     color: #fff;
-
+    position: absolute;
+    margin-left: 68rem;
 }
 aside h5{
     font-size: 1.3rem;
+    text-align: center;
 }
 aside .fa-magnifying-glass{
-    background-color: #143444;
+    /* background-color: #143444; */
     color: #Fff;
     padding: 0.2rem;
     cursor: pointer;
+    position: absolute;
 }
 .searchbar{
     display: flex;
     margin-bottom: 1rem;
+ 
 
+}
+label{
+    margin-left: 9rem;
 }
 aside #search{
     height: 1.6rem;
+     width: 12rem;
+    margin-left: 25px;
 }
 hr{
     color: black;

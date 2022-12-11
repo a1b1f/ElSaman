@@ -130,7 +130,7 @@ getRestByName(){
 
   getByCategory(cName:string){
     this.Categories.filter(i=>{
-      if(i.nameEN==cName)
+      if(i.nameAR==cName)
       {
         i.isChecked=!i.isChecked
       }
@@ -139,11 +139,11 @@ getRestByName(){
     this.Categories.forEach(c=>{
       if(c.isChecked==true)
       {
-        this.ProductService.getByCategory(c.nameEN).subscribe(res=>
+        this.ProductService.getByCategory(c.nameAR).subscribe(res=>
           {
             console.log(res);
             this.unfiltered=res.data
-            this.products.push(...this.unfiltered.filter(i=>i.isDeleted == false && i.nameEN.includes(this.productName)))
+            this.products.push(...this.unfiltered.filter(i=>i.isDeleted == false && i.nameAR.includes(this.productName)))
           })
 
       }

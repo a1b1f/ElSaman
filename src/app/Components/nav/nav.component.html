@@ -3,18 +3,21 @@
     <div class="cont1">
   <div class="brand">
 
-     <a routerLink="/Home">Home</a>
-      <a routerLink="/Product">Products</a>
-     <!-- <li><a routerLink="/Team">Stores</a></li> -->
-     <a routerLink="/Team">About Us</a>
 
 
-    <i class="fas fa-bars" id="menu-bars"></i>
-    <i routerLink="/profile" class="fa-solid fa-user" *ngIf="isloog"></i>
-    <i class="fa-solid fa-arrow-right-from-bracket" (click)="LogOut()" *ngIf="isloog"></i>
-    <i class="fa-solid fa-door-open"  *ngIf="!isloog" routerLink="/login"></i>
     <a routerLink="/Cart" class="fas fa-shopping-cart"></a>
     <a routerLink="/favorite"  class="fas fa-heart" id="heart"></a>
+
+    <i class="fa-solid fa-arrow-right-from-bracket" (click)="LogOut()" *ngIf="isloog"></i>
+    <i class="fa-solid fa-door-open"  *ngIf="!isloog" routerLink="/login"></i>
+    <i routerLink="/profile" class="fa-solid fa-user" *ngIf="isloog"></i>
+    
+    <a routerLink="/Home">الصفحة الرئيسية </a>
+    <a routerLink="/Product"> المنتجات </a>
+   <!-- <li><a routerLink="/Team">Stores</a></li> -->
+   <a routerLink="/Team">معلومات عن</a>
+   <i class="fas fa-bars" id="menu-bars"></i>
+  
     <i ></i>
 
 
