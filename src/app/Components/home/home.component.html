@@ -1,38 +1,37 @@
+<!-- home section starts  -->
+<header>
+  <!-- <img src="../../../assets/janko-ferlic-KwU5Cl0LSXs-unsplash.jpg"> -->
+</header>
 
-    <!-- home section starts  -->
-
-<section >
-<img src="../../../assets/janko-ferlic-KwU5Cl0LSXs-unsplash.jpg">
-</section>
-
-    <ng-image-slider [images]="imgCollection" ></ng-image-slider>
+<ng-image-slider [images]="imgCollection"></ng-image-slider>
 
 
 
-  <!-- home section ends -->
+<!-- home section ends -->
 
-  <!-- dishes section starts  -->
-
-
-  <div >
-      <h3 class="sub-heading">Products </h3>
-      <main>
+<!-- dishes section starts  -->
+<div class="container my-5">
 
 
-        <section class="dishes" id="dishes" *ngFor="let item of products ">
+  <div>
+    <h3 class="sub-heading">المنتجات </h3>
+    <main class="d-grid">
+      <div class="row">
+      <section  *ngFor="let item of products "  class="col" >
         <div >
-            <app-product-card  [product]="item"></app-product-card>
-            </div>
-      </section>
-
-      </main>
+          <app-product-card [product]="item"></app-product-card>
         </div>
+      </section>
+    </div>
+    </main>
+  </div>
+</div>
 
-  <!-- dishes section ends -->
+<!-- dishes section ends -->
 
-  <!-- about section starts  -->
+<!-- about section starts  -->
 
-  <!-- <section style="background-color: #143444;" class="about" id="about">
+<!-- <section style="background-color: #143444;" class="about" id="about">
 
       <h3 class="sub-heading"> about us </h3>
       <h1 class="heading"> why choose us? </h1>
@@ -56,25 +55,25 @@
 
   </section> -->
 
-  <!-- about section ends -->
+<!-- about section ends -->
 
-  <!-- meals section starts  -->
+<!-- meals section starts  -->
 
-  <!-- <section class="menu" id="menu"> -->
+<!-- <section class="menu" id="menu"> -->
 
 
-    <!-- <div style=" background:#fff; ">
+<!-- <div style=" background:#fff; ">
       <h3 class="sub-heading">Restaurants </h3>
 
         </div> -->
 
 
 
-  <!-- meals section ends -->
+<!-- meals section ends -->
 
-  <!--Ingredients section starts  -->
+<!--Ingredients section starts  -->
 
-  <!-- <section style="background-color: #143444; " class="item"  id="item">
+<!-- <section style="background-color: #143444; " class="item"  id="item">
 
       <h3 class="sub-heading">Ingredients</h3>
       <div  >
@@ -89,15 +88,15 @@
       </div>
   </section> -->
 
-  <!-- Ingredients section ends -->
+<!-- Ingredients section ends -->
 
-  <!-- Restaurant section starts  -->
-  <!-- <div style=" background:#eee; height: 30px; ">
+<!-- Restaurant section starts  -->
+<!-- <div style=" background:#eee; height: 30px; ">
 </div> -->
 
 
-  <!-- Restaurant section ends -->
+<!-- Restaurant section ends -->
 
 
 
-  <!-- custom js file link  -->
+<!-- custom js file link  -->

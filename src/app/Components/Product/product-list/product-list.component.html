@@ -1,38 +1,39 @@
-
-
-<body>
+<main class="row container">
   <!--Filter SideBar-->
-  <aside>
-    <div class="searchbar">
-      <input id="search" type="text" placeholder=" Search" #rr (keyup)="getName(rr.value)"
-      (keyup)="getProductByName()"> <i
-        class="fa-solid fa-magnifying-glass" (click)="getProductByName()"></i>
+  <aside class="col-3 mt-4">
+    
+    <div class="my-4">
+      <input type="text" class="form-control" placeholder="بحث.." #rr (keyup)="getName(rr.value)" (keyup)="getProductByName()"> 
+      <!-- <button class="btn btn-primary">
+      <i class="fa-solid fa-magnifying-glass" (click)="getProductByName()"></i>
+    </button> -->
     </div>
-    <h5> المنتجات</h5>
-    <div class="check" *ngFor="let item of Categories">
+
+    
+    <h5> الأقسام</h5>
+    <div *ngFor="let item of Categories">
+      <input type="checkbox" class="mx-1" [value]="item.nameAR" #input (change)="getByCategory(input.value)" />
       <label> {{item.nameAR}}</label>
-      <input type="checkbox" [value]="item.nameAR" #input (change)="getByCategory(input.value)"  />
-
-    <hr style="width:50%;text-align:center;color: black;">
 
     </div>
-    <hr>
     <br>
   </aside>
   <!--Recipes-->
-  <div>
-    <h3 class="sub-heading">المنتجات</h3>
+  <div class="col-9">
+    <!-- <h3 class="sub-heading">المنتجات</h3> -->
     <!-- <div *ngFor="let y of test">{{y}}</div> -->
 
 
-    <main>
-      <section class="dishes" id="dishes" *ngFor="let item of Products
-      | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}">
-      <div class="box-container">
-        <app-product-card [product]="item"></app-product-card>
-      </div>
-    </section>
+    <main class="d-grid">
+      <div class="row">
+        <section *ngFor="let item of Products
+      | paginate : { itemsPerPage: tableSize, currentPage: page, totalItems: count}" class=" col">
 
+          <div >
+            <app-product-card [product]="item"></app-product-card>
+          </div>
+        </section>
+      </div>
     </main>
     <div class="d-flex justify-content-center">
       <pagination-controls previousLabel="Prev" nextLabel="Next" (pageChange)="onTableDataChange($event)">
@@ -42,5 +43,4 @@
 
 
   </div>
-</body>
-
+</main>

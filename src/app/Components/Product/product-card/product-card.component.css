@@ -173,7 +173,7 @@
 
 } */
 
-body {
+/* body {
     margin: 0;
     padding: 0;
     min-height: 100vh;
@@ -188,14 +188,12 @@ body {
     max-width: 100%;
     margin-left: 20px;
     display: flex;
-    /* position: relative; */
     justify-content: space-between;
     flex-wrap: wrap;
 }
 
 .container .card {
     width: 25%;
-    /* margin: 10px; */
     position: relative;
     border-radius: 10px;
 }
@@ -239,11 +237,11 @@ body {
 
 .container .card:hover .face.face1 .content {
     opacity: 1;
-}
+} */
 
 
 
-.container .card .face.face2 {
+/* .container .card .face.face2 {
     position: relative;
     background: #fff;
     display: flex;
@@ -253,21 +251,21 @@ body {
     box-sizing: border-box;
     box-shadow: 0 20px 50px rgba(0,0,0,0.8);
     transform: translateY(-100px);
-}
+} */
 
-.container .card:hover .face.face2{
+/* .container .card:hover .face.face2{
     transform: translateY(0);
     margin-top: 30px;
-}
+} */
 
-.container .card .face.face2 .content p {
+/* .container .card .face.face2 .content p {
     margin: 0px;
     padding: 0;
     text-align: center;
     color: #414141;
-}
+} */
 
-.container .card .face.face2 .content h3 {
+/* .container .card .face.face2 .content h3 {
     margin: 0 0 10px 0;
     padding: 0;
     color: #fff;
@@ -278,31 +276,30 @@ body {
 #price{
     margin:0 ;
     text-align: center;
-}
+} */
 
+.card:hover{
+    box-shadow: 4px 12px rgb(199, 198, 198);
+}
 a#cart{
     display: inline-block;
     font-size: 25px;
     color:rgb(58, 50, 50);
     /* background: rgb(187, 29, 29); */
-    border-radius: 5px;
     cursor: pointer;
-    padding:10px 15px;
-    margin-left: 15px
+    
 }
 a#cart:hover{
     background: #fff;
-    color: rgb(23, 90, 179);
+    color: green;
 }
 a#heart{
     display: inline-block;
     font-size: 25px;
     color:rgb(58, 50, 50);
     /* background: rgb(187, 29, 29); */
-    border-radius: 5px;
     cursor: pointer;
     /* padding:5px 15px; */
-    margin-left: 10px
 }
 a#heart:hover{
     background: #fff;
