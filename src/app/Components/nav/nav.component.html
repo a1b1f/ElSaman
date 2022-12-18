@@ -17,20 +17,32 @@
     </div>
   </nav> -->
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light" style="flex-direction: row-reverse;">
+<nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: black;">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
   </button>
-  <a class="navbar-brand" routerLink="/Home">الصفحة الرئيسية</a>
-  <a class="navbar-brand" routerLink="/Product">المنتجات</a>
-  <a class="navbar-brand" routerLink="/Team">معلومات عن</a>
+  <div class="navbar-brand">
+  <a class="navbar-brand " routerLink="/Home">الصفحة الرئيسية</a>
+  <a class="navbar-brand"  routerLink="/Product"> المنتجات</a>
+  <a class="navbar-brand" routerLink="/Team" > معلومات عن </a>
+</div>
   <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-        <a routerLink="/Cart" class="fas fa-shopping-cart"></a>
-        <a routerLink="/favorite"  class="fas fa-heart" id="heart"></a>
+    <i routerLink="/profile" class="fa-solid fa-user" *ngIf="isloog"></i>
         <i class="fa-solid fa-arrow-right-from-bracket" (click)="LogOut()" *ngIf="isloog"></i>
         <i class="fa-solid fa-door-open"  *ngIf="!isloog" routerLink="/login"></i>
-        <i routerLink="/profile" class="fa-solid fa-user" *ngIf="isloog"></i>
+        <a routerLink="/favorite"  class="fas fa-heart" id="heart"></a>
+        <a routerLink="/Cart" class="fas fa-shopping-cart"></a>
         <i class="fas fa-bars" id="menu-bars"></i>
         <i ></i>
   </div>
 </nav>
+<script src="http://code.jquery.com/jquery-3.3.1.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+$('a').on('click',function(){
+  $(this).siblings().removeClass('active');
+  $(this).addClass('active');
+
+})
+})
+</script>
