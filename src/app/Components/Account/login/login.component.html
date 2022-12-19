@@ -16,12 +16,7 @@
 
 		<div class="container">
 			<input type="checkbox" id="flip" hidden>
-		   <div class="cover">
-			   <div class="front">
-				   <img src="../../../../assets/16.jpg" alt="">
-
-			   </div>
-		   </div>
+		  
 			<form action="#" [formGroup]="registerForm" method="post">
 			<div class="form-content" >
 			   <div class="login-form">
@@ -32,16 +27,16 @@
 				   <div class="input-boxes">
 				  <div class="input-box">
 					  <img src="../../../../assets/security.png" style="width: 45px;">
-					  <input type="text" placeholder="رقم التليفوون" formControlName="email">
+					  <input type="text" placeholder="رقم التليفون" formControlName="email">
 				  </div>
 				  <div class="input-box">
 					  <img src="../../../../assets/icon.png"style="width: 45px;">
-					  <input type="password" placeholder="كلمه المرور" formControlName="password">
+					  <input type="password" placeholder="كلمة المرور" formControlName="password">
 				  </div>
 				  <div class=" button input-box">
-					  <input type="submit" value="log in" (click)="add()">
+					  <input type="submit" value="دخول " (click)="add()">
 				  </div>
-				  <div class="text sign-up-text"  >Don't have an account? <label routerLink="/signup">Signup now</label>
+				  <div class="text sign-up-text"  >ليس لديك حساب؟  <label routerLink="/signup"> سجل الآن</label>
 				  </div>
 				   </div>
 
@@ -54,6 +49,13 @@
 
 
 			</form>
+
+			<div class="cover">
+				<div class="front">
+					<img src="../../../../assets/16.jpg" alt="">
+ 
+				</div>
+			</div>
 
 		</div>
 

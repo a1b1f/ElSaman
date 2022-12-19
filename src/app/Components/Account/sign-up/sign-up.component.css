@@ -1,9 +1,4 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Poppins" , sans-serif;
-}
+
 body{
   min-height: 100vh;  
   display: flex;
@@ -31,7 +26,7 @@ body{
 {
     position: absolute;
     top: 0;
-   left:50% ;
+   right:50% ;
     height: 100%;
     width: 50%;
    z-index: 98;
