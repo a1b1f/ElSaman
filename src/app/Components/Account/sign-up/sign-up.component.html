@@ -15,7 +15,8 @@
     <input type="checkbox" id="flip" hidden>
      <div class="cover">
        <div class="front">
-         <img src="../../../../assets/16.jpg" alt="">
+         <!-- <img src="../../../../assets/16.jpg" alt=""> -->
+         <img src="../../../../assets/login.webp" alt="">
 
        </div>
      </div>
@@ -56,6 +57,7 @@
   <br>
 				<span style="color:indianred" *ngIf="formSubmitted &&signUpForm.controls['phone'].hasError('required')">حقل مطلوب</span>
   </div>
+
   <div class="input-box">
 	  <img src="../../../../assets/icon.png" style="width: 35px;">
 	  <input type="password" placeholder="كلمه المرور" formControlName="password" (change)="onPasswordChange()">
