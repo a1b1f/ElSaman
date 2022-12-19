@@ -30,7 +30,7 @@
    <div class="input-boxes">
 <div class="input-box">
   <img src="../../../../assets/security.png" style="width: 35px;" >
-  <input type="text" placeholder=" الاسم باللغةالعربية" formControlName="nameAr" >
+  <input type="text" placeholder=" الاسم باللغة العربية" formControlName="nameAr" >
   <br>
 	<span style="color:indianred" *ngIf="formSubmitted &&signUpForm.controls['nameAr'].hasError('required')">حقل مطلوب</span>
 
@@ -45,7 +45,7 @@
 </div>
 <div class="input-box">
 <img src="../../../../assets/5.png" style="width: 35px;" >
-<input type="email" placeholder="الايميل" formControlName="email">
+<input type="email" placeholder="البريد الإلكتروني " formControlName="email">
 <br>
   <span style="color:indianred" *ngIf="formSubmitted &&signUpForm.controls['email'].hasError('email')">ادخل ايميل الكتروني صحيح
     </span>
@@ -58,17 +58,17 @@
   </div>
   <div class="input-box">
 	  <img src="../../../../assets/icon.png" style="width: 35px;">
-	  <input type="password" placeholder="كلمه المرور" formControlName="password" (change)="onPasswordChange()">
+	  <input type="password" placeholder="كلمة المرور" formControlName="password" (change)="onPasswordChange()">
 <div>
   <span style="color:indianred" *ngIf="formSubmitted &&signUpForm.controls['password'].hasError('required')">حقل مطلوب</span>
 </div>
   </div>
   <div class="input-box">
 	  <img src="../../../../assets/icon.png" style="width: 35px;">
-	  <input type="password" placeholder="تاكيد كلمه المرور" formControlName="ConfirmPassword" (change)="onPasswordChange()">
+	  <input type="password" placeholder="تأكيد كلمة المرور" formControlName="ConfirmPassword" (change)="onPasswordChange()">
     <br>
 				<span style="color:indianred" *ngIf="formSubmitted &&signUpForm.controls['ConfirmPassword'].hasError('required')">حقل مطلوب</span>
-        <span style="color:indianred" *ngIf="formSubmitted &&confirm_password.hasError('mismatch')"> كلمه المرور غير مطابقه
+        <span style="color:indianred" *ngIf="formSubmitted &&confirm_password.hasError('mismatch')">كلمة المرور غير مطابقة 
         </span>
   </div>
 
@@ -76,10 +76,10 @@
 
 
   <div class=" button input-box">
-	  <input type="submit" (click)="add()" value="تسجيل الدخول" >
+	  <input type="submit" (click)="add()" value="تسجيل " >
   </div>
 
-  <div class="text sign-up-text">Already have an account?<label  routerLink="/login">Login now</label>
+  <div class="text sign-up-text">لديك حساب؟ <label  routerLink="/login">تسجيل الدخول </label>
 
    </div>
 
