@@ -1,10 +1,10 @@
 
 
 <body>
-  <div class="container">
-    <div class="main-body">
+  <!-- <div class="container">
+    <div class="main-body"> -->
 
-      <div class="row gutters-sm">
+      <!-- <div class="row gutters-sm">
         <div class="col-md-4 mb-3">
           <div class="card">
             <div class="card-body">
@@ -17,7 +17,7 @@
                   <p class="text-muted font-size-sm">{{profile.phone}}</p>
 
                   <!-- <button class="btn btn-outline-primary">Message</button> -->
-                </div>
+                <!-- </div>
 
               </div>
 
@@ -25,9 +25,9 @@
 
           </div>
 
-         </div>
+         </div> -->
 
-        <div class="col-md-8   ">
+        <!-- <div class="col-md-8   ">
           <form class="login-form" enctype="multipart/form-data" method="post" [formGroup]="form">
           <div class="card mb-3 pt-3">
             <div class="card-body">
@@ -54,7 +54,6 @@
                 </div>
                 <div class="col-sm-9 text-secondary">
                   <input formControlName="Phone" placeholder="Enter Your Phone Please ">
-                  <!-- fip@jukmuh.al -->
                 </div>
               </div>
               <hr>
@@ -66,25 +65,54 @@
               </div>
             </div>
           </div>
-        </form>
-          <!-- <div id="Order" class="">
-            <div class="card h-100">
-              <div class="card-body"> -->
-                <!-- <h4 class="d-flex align-items-center mb-3">Last Order </h4> -->
-                <!-- <section>
-                  <h5>Order Number</h5>
-                  <h5>Order Date</h5>
-                </section>
-                <section>
-                  <h5>{{Order.id}}</h5>
-                  <h5>{{Order.orderDate}}</h5>
-                </section> -->
+        </form>  -->
 
-              <!-- </div>
-            </div>
-          </div> -->
-        </div>
-      </div>
+
+        <form class="login-form" enctype="multipart/form-data" method="post" [formGroup]="form">
+        <div class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+           <div class="card p-4"> 
+            <div class=" image d-flex flex-column justify-content-center align-items-center"> 
+              <button class="btn btn-secondary"> 
+                <img src="https://i.imgur.com/wvxPV9S.png" height="100" width="100" /></button> 
+                <!-- <span class="name mt-3">Eleanor Pena</span>  -->
+                <div class="name mt-3">
+                  <h4> {{profile.nameEN}}</h4>
+                  <p class="text-secondary mb-1">{{profile.nameAR}}</p>
+                  <p class="text-muted font-size-sm">{{profile.phone}}</p>
+                </div>  
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">الأسم</h6>
+    
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <input formControlName="NameAR" placeholder="أدخل اسمك من فضلك" >
+                    </div>
+                  </div>
+    
+                  <hr>
+    
+                  <hr>
+                  <div class="row">
+                    <div class="col-sm-3">
+                      <h6 class="mb-0">التليفون</h6>
+                    </div>
+                    <div class="col-sm-9 text-secondary">
+                      <input formControlName="Phone" placeholder="أدخل رقم هاتفك من فضلك ">
+                      <!-- fip@jukmuh.al -->
+                    </div>
+                    <div class=" d-flex mt-2"> 
+                      <button class="btn1 btn-dark" target="__blank"
+                  (click)="add()">تعديل</button> </div> 
+                  </div>  
+                        </div> 
+                        
+                      </div>
+                      
+</div>
+        </form>
+        <!-- </div> -->
+      <!-- </div>
     </div>
-  </div>
+  </div> -->
 </body>

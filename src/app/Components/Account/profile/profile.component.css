@@ -1,5 +1,5 @@
 
-body{
+/* body{
   margin-top:4rem;
   color: #143444;
   text-align: left;
@@ -89,5 +89,118 @@ a.btn-info, button.btn{
 }
 .progress5{
   background-color:#143444 ;
+}
+ */
+
+* {
+  margin: 0;
+  padding: 0;
+
+}
+
+body{
+  background-image: url("/src/assets/janko-ferlic-KwU5Cl0LSXs-unsplash.jpg") ;
+  background-repeat: no-repeat;
+
+}
+button.btn.btn-secondary{
+  background-color: rgb(233, 32, 32);
+}
+input{
+  font-size: 20px;
+  margin: 10px 0 15px 0;
+  width: 100%;
+  height: 3rem;
+  border-radius: 18px;
+}
+div.col-sm-3{
+  margin-top: 20px;
+}
+.card {
+  width: 500px;
+  height: 35rem;
+  background-color: #464040;
+  border: none;
+  cursor: pointer;
+  transition: all 0.5s;
+  color: #eee;
+}
+p.name.mt-3{
+  color: #eee;
+}
+.image img {
+  transition: all 0.5s
+}
+
+.card:hover .image img {
+  transform: scale(1.5)
+}
+
+.btn {
+  height: 140px;
+  width: 140px;
+  border-radius: 50%
+}
+
+.name {
+  font-size: 22px;
+  font-weight: bold
+}
+
+.idd {
+  font-size: 14px;
+  font-weight: 600
+}
+
+.idd1 {
+  font-size: 12px
+}
+
+.number {
+  font-size: 22px;
+  font-weight: bold
+}
+
+.follow {
+  font-size: 12px;
+  font-weight: 500;
+  /* color: #444444; */
+}
+
+.btn1 {
+  height: 40px;
+  width: 150px;
+  border-radius: 10px;
+  margin-top: 75px;
+  background-color: rgb(233, 32, 32);
+  color: #070707;
+  font-size: 15px ;
+}
+.btn1:hover{
+  background-color: rgb(90, 93, 95);
+  color: #eee;
+}
+.text span {
+  font-size: 13px;
+  /* color: #545454; */
+  font-weight: 500
+}
+
+.icons i {
+  font-size: 19px
+}
+
+hr .new1 {
+  border: 1px solid
+}
+
+.join {
+  font-size: 14px;
+  /* color: #a0a0a0; */
+  font-weight: bold
+}
+
+.date {
+  background-color: #ccc;
 }
 

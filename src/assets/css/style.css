@@ -7,35 +7,26 @@
   /* 
    */
   
-  nav.navbar.navbar-expand-lg.navbar-light.bg-light {
-  
-    color: white;
-    border-bottom: 5px rgb(204, 26, 49) solid;
-    background-color: rgb(22, 21, 28);
-    position: sticky;
-    top: 0;
-    left: 0;
-    z-index: 10;
-    height: 13vh;
-  }
+
   div#navbarTogglerDemo03.collapse.navbar-collapse{
     border-bottom: 5px rgb(204, 26, 49) solid;
     background-color: rgb(22, 21, 28);
-    height: 13vh;
+    /* height: 19vh; */
   }
   div.navbar-brand{
     color: white;
     border-bottom: 5px rgb(204, 26, 49) solid;
     background-color: rgb(22, 21, 28);
-    height: 13vh;
+    height: 9vh;
     margin: 0;
 
 
   } 
+
   a.navbar-brand{
     color: white;
-    margin-top: 20rem;
-    margin: 25px; 
+    /* margin-top: 15px; */
+    margin: 10px 25px 10px 20px; 
   }
   a.navbar-brand.active{
     background-color: rgb(235, 27, 27);
@@ -52,7 +43,7 @@
     height: 45px;
   font-size: 20px ;
   margin-left: 70px;
-    margin-top: 35;
+    /* margin-top: 35; */
     border-radius: 50%;
     color: #eee;
     
@@ -66,14 +57,14 @@
   font-size: 20px ;
   margin-left: 10px;
   margin-right: 25px;
-    margin-top: 35;
+    /* margin-top: 35; */
     border-radius: 50%;
     color: #eee; 
   }
  a.fas.fa-shopping-cart{
   margin-right: 80px; 
   color:#eee;
-  font-size: 25px;
+  font-size: 20px;
 
  }
  a.fas.fa-shopping-cart:hover{
@@ -85,7 +76,7 @@
  a#heart.fas.fa-heart{
   margin-right: 50px; 
 color:#eee;
-font-size: 26px;
+font-size: 20px;
 
  }
   a#heart.fas.fa-heart:hover{
@@ -93,12 +84,12 @@ font-size: 26px;
   }
   i.fa-solid.fa-user{
 margin-right: 400px;
-margin-top: 13px;
-font-size: 26px;
+margin-top: 7px;
+font-size: 20px;
   }
   i.fa-solid.fa-arrow-right-from-bracket{
-    margin-top: 13px;
-font-size: 26px;
+    margin-top: 7px;
+font-size: 20px;
 margin-right: 50px;
 
   }

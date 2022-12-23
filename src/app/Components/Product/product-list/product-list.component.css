@@ -1,10 +1,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;600;700&display=swap');
 
 aside{
-    background-color: rgba(221, 28, 28, 0.87);
+    /* background-color: rgba(221, 28, 28, 0.87); */
     height: 100vh;
     font-size: 20px;
-    color: #fff;
+    color: rgb(219, 24, 24);
 }
 
 .fa-magnifying-glass{
