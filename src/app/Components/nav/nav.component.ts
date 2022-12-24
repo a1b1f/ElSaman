@@ -10,6 +10,8 @@ import { SignUpViewModel } from 'src/ViewModels/SignUp';
 })
 export class NavComponent implements OnInit {
   AccountName:string="";
+  navbarCollapsed = true
+
   @Input() accountname:SignUpViewModel= new SignUpViewModel();
 
   constructor(private LogOutt: AccountServices, private http: HttpClient) {
