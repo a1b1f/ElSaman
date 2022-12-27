@@ -30,7 +30,7 @@ section {
 .fa-minus, .fa-plus{
   background-color: blue;
   color: #fff;
-  padding: 0.1rem;
+  padding: 0.7rem;
   cursor: pointer;
 }
 i.fa-solid.fa-minus{

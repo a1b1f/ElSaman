@@ -93,4 +93,8 @@ export class CartComponent implements OnInit , OnChanges {
   remove(CartID: number) {
     this.cart.RempveCart(CartID).subscribe((res) => this.show());
   }
+
+  removeAll(){
+    this.CartItem=[];
+  }
 }

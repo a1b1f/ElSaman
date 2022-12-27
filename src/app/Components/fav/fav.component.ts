@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { AccountServices } from 'src/Services/Account';
 import { addfav, favServices } from 'src/Services/Fav';
+import { OrderServices } from 'src/Services/OrderServices';
 import { productservice } from 'src/Services/productservice';
 
 @Component({
@@ -9,56 +10,76 @@ import { productservice } from 'src/Services/productservice';
   styleUrls: ['./fav.component.css']
 })
 export class FavComponent implements OnInit {
-
   FavtItem: addfav[] = [];
-  userId:string=this.acc.getCurrentUserId();
-
-  constructor(    private fav: favServices,
+  constructor(
+    private cart: favServices,
     private productservice: productservice,
-    private acc: AccountServices) { }
+    private order:OrderServices,
+    private acc: AccountServices
+  ) {}
+  ngOnChanges(): void {
 
-  ngOnInit(): void {
-    this.show();
 
   }
+  ngAfterViewInit(): void {
+
+  }
+  ngOnInit(): void {
+    this.show();
+  }
   show() {
-    this.fav.GetFav().subscribe((res) => {
+    this.order.GetFavByUser(this.acc.getCurrentUserId()).subscribe((res) => {
       this.FavtItem = res.data.data;
-      //console.log(res.data.data)
-      //console.log(this.FavtItem);
+      console.log( res.data.data )
+
+      console.log( this.FavtItem )
       this.getProductNames();
-      this.getProductImages();
-
+      this.getProductPrices();
+      this.getProductImage();
     });
-}
-getProductNames() {
-  this.FavtItem.forEach((element) => {
-    console.log(element)
-    this.fav
-      .GetRecipeById(element.productID)
-      .subscribe((res) => {
-        //console.log(res);
-        (element.product_Name = res.data.nameEN)
 
+  }
+  getProductImage(){
+    this.FavtItem.forEach((element) => {
+      console.log(element.productID)
+      this.cart
+        .GetProductById(element.productID!)
+        .subscribe((res) =>
+         {
+         // console.log( res.data)
+          element.imageUrl = res.data.imageUrl
+        });
+    });
+  }
+  getProductNames() {
+    this.FavtItem.forEach((element) => {
+      console.log(element)
+      this.cart
+        .GetProductById(element.productID!)
+        .subscribe((res) =>
+         {
+          console.log( res.data.nameEN)
+          element.product_Name = res.data.nameEN
+        });
+    });
+    //console.log(this.CartItem);
+  }
+  getProductPrices() {
+    this.FavtItem.forEach((element) => {
+      this.cart.GetProductById(element.productID!).subscribe((res) => {
+        console.log(res.data)
+        element.price = res.data.price ;
       });
-  });
-}
-getProductImages() {
-  this.FavtItem.forEach((element) => {
-    //console.log(element)
-    this.fav
-      .GetRecipeById(element.productID)
-      .subscribe((res) => {
-        console.log(res);
-        (element.productImg = res.data.imageUrl)
+    });
+    //console.log(this.CartItem);
+  }
 
-      });
-  });
-}
-remove(FavID: number,productID:number) {
-  this.fav.RempveFav(FavID).subscribe((res) =>{
-    console.log(res);
-    this.show()});
-}
+  remove(favId: number) {
+    console.log(favId)
+    this.cart.RempveFav(favId).subscribe((res) => this.show());
+  }
+  removeAll(){
+    this.FavtItem=[];
+  }
 
 }

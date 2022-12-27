@@ -24,6 +24,9 @@ export class favServices{
 
         return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetAPI",this.getheader());
     }
+    GetProductById(RecipeID:number){
+      return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetDetails?ID="+RecipeID,this.getheader());
+  }
 
     GetFav(){
         return this.http.get<ResultViewModel>("https://localhost:7129/FavAPI/Get",this.getheader());
@@ -46,12 +49,12 @@ export class favServices{
 }
 
 export class addfav{
-  fav_ID=0;
+  id=0;
   productID = 0;
   qty= 1;
   UserId="";
   price=0;
   product_Name="";
   productImg=""
-
+  imageUrl!: "";
 }

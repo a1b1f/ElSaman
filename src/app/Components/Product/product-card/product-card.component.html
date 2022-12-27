@@ -1,39 +1,4 @@
-<!-- <div class="box" >
-  <a  class="fas fa-heart" (click)="AddFav(product.id)"></a>
-  <a [routerLink]="['/product/details',product.id]"  class="fas fa-eye"></a>
-    <img src="https://localhost:7129/{{product.imageUrl}}" alt="">
-    <h3>{{product.nameEN}}</h3>
-    <div >
-</div>
-   <br>
-   <br>
-    <div id="price" >{{product.price}} EGP</div>
-    <button  class="btn" (click)="AddTOCart(product.id)" >add to cart</button>
 
-</div> -->
-
-<!-- <div class="container">
-  <div class="card">
-      <div class="face face1">
-          <div class="content">
-              <div class="icon">
-                <img src="https://localhost:7129/{{product.imageUrl}}" alt="">
-              </div>
-          </div>
-      </div>
-      <div class="face face2">
-          <div class="content">
-            <h3 style="margin-top:45px ;">{{product.nameAR}}</h3>
-            <div id="price" >{{product.price}} EGP</div>
-
-
-           <a style="margin-left: 15px" id="cart" (click)="AddTOCart(product.id)" class="fas fa-shopping-cart"></a>
-            <a class="btn" (click)="AddTOFav(product.id)" class="fas fa-heart" id="heart"></a>
-          </div>
-      </div>
-  </div>
-
-</div> -->
 <div class="card text-center my-4" style="width: 18rem; ">
   <img class="card-img" style="height: 240px;" src="https://localhost:7129/{{product.imageUrl}}" alt="{{product.nameAR}}">
   <div class="card-body">
@@ -42,6 +7,6 @@
 
     <a  (click)="AddTOCart(product.id)" class="fas fa-shopping-cart" id="cart"></a>
     <a  (click)="AddTOFav(product.id)" class="fas fa-heart"  id="heart"></a>
-    
+
   </div>
 </div>
