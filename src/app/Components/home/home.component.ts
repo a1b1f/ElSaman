@@ -79,33 +79,7 @@ console.log(productID)
 
 
   }
-  imgCollection: Array<object> = [
-    {
-      Image:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS28ZnmzDRqWQMy3ey0KWdjX5DbiekmmoN5LQ&usqp=CAU',
-      thumbImage: '../../../assets/08_Hertitage-Gold-5-piece.jpg'
-    },
-    {
-      thumbImage: '../../../assets/Inkedاواني.jpg',
-    },
-    {
-      thumbImage: '../../../assets/ح.jpg',
-    },
-    {
-      thumbImage: '../../../assets/حلل.jpg',
-    },
-    {
-      thumbImage: '../../../assets/312822971_659261145821016_5559204330895139212_n.jpg',
-    },
-    {
-      thumbImage: '../../../assets/اوووو.jpg',
-    },
-    {
-      thumbImage: '../../../assets/,[ii.jpg',
-    },
-    {
-      thumbImage: '../../../assets/حلل وجهه.jpg',
-    },
-];
+
 // resturant
 
 getNameres(valu:string){
