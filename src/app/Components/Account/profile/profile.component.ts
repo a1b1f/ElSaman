@@ -21,16 +21,14 @@ export class ProfileComponent implements OnInit {
  Order:Order=new Order();
  profile:SignUpViewModel = new SignUpViewModel();
  id:string=this.acc.getCurrentUserId();
+ isHidden:boolean=false;
 
  ngOnInit(): void {
 
    this.profileInfo()
    this.form=this.builder.group(
      {
-       NameEN:['',[Validators.required]],
        NameAR:['',[Validators.required]],
-       Role:['',[Validators.required]],
-       Email:['',[Validators.required]],
        Phone:['',[Validators.required]],
 
    });
@@ -52,6 +50,7 @@ getLastOrder(){
 }
 
  add(){
+  this.isHidden=true;
    let SignUP =new EditProfileViewModel();
    SignUP.NameAR=this.form.value["NameAR"];
    SignUP.password=this.form.value["Email"];
@@ -59,24 +58,26 @@ getLastOrder(){
    SignUP.Role="User";
    SignUP.id=this.acc.getCurrentUserId();
    console.log(SignUP);
-
-   this.acc.EditProfile(SignUP,this.acc.getCurrentUserId()).subscribe(res=>{
-   //this.acc.EditProfile(SignUP,'Admin').subscribe(res=>{
-     console.log(res)
-     console.log(this.acc.getCurrentUserId())
-     if(res.success){
-       this.router.navigateByUrl('UserAPI/SignIn')
-     }
-     else{
-       console.log(res)
-       console.log('res')
-       alert('Try again!!!!!!!')
-       console.log(this.form.errors)
-     }
-   },err=>{
-     console.log(err);
-   })
+   if(this.form.valid){
+    this.acc.EditProfile(SignUP,this.acc.getCurrentUserId()).subscribe(res=>{
+      //this.acc.EditProfile(SignUP,'Admin').subscribe(res=>{
+        console.log(res)
+        console.log(this.acc.getCurrentUserId())
+        if(res.success){
+          console.log(res);
+        }
+        else{
+          console.log(res)
+          console.log('res')
+          alert('Try again!!!!!!!')
+          console.log(this.form.errors)
+        }
+      },err=>{
+        console.log(err);
+      })
+   }
  }
+
  onPasswordChange() {
    if (this.confirm_password.value == this.password.value) {
      this.confirm_password.setErrors(null);

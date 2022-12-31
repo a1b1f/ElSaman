@@ -7,7 +7,7 @@
   font-family: "Poppins" , sans-serif;
 }
 body{
-min-height: 100vh;  
+min-height: 100vh;
 display: flex;
 align-items: center;
 justify-content: center;
@@ -43,11 +43,11 @@ padding: 30px;
 }
 .container .cover::before
 {
- 
+
   position: absolute;
   height: 100%;
   width: 100%;
-  background:  rgb(18, 140, 197); 
+  background:  rgb(18, 140, 197);
   opacity: 0.5;
   /*z-index: 100;*/
 }
@@ -90,26 +90,12 @@ width: calc(100% / 2 - 25px  );
 }
 form  .form-content .title
 {
-position: relative;  
+position: relative;
 font-size: 25px;
 font-weight: 500;
 color:rgb(2, 13, 71);
 }
-form  .form-content .title::before
-{
-  content: '';
-  position: absolute;
-  left: 0;
-  bottom: 0;
-  height: 3px;
-  width: 25px;
-  background: black;
 
-
-}
-form  .SignUp-form  .title::before{
-width: 20px;
-}
 form .form-content .input-boxes
 {
   margin-top: 30px;
@@ -126,7 +112,7 @@ form .form-content .input-box
   position: relative;
 }
 form .form-content .input-box  input
-{   
+{
   width: 500px;
  margin: 15px;
   height: 38px;
@@ -156,10 +142,10 @@ form .form-content .text
  font-weight: 500;
  color: white;
 }
-form .form-content .text a 
+form .form-content .text a
 {
-  text-decoration: none; 
-  color: white;   
+  text-decoration: none;
+  color: white;
 }
 form .form-content .text a:hover
 {
@@ -179,7 +165,7 @@ background:rgb(35, 36, 37); ;
 border-radius: 25px;
 width: 200px;
 margin: 15px;
-height: 45px; 
+height: 45px;
 padding: 0;
 cursor: pointer;
 transition: all 0.4s ease;
@@ -194,13 +180,13 @@ form .form-content  .button input:hover
 form .form-content label
 {
   color:#082252;
-  
+
 }
 form .form-content label:hover
 {
   text-decoration: underline;
 
-  
+
 }
 form .form-content .login-text,
 form .form-content .sign-up-text

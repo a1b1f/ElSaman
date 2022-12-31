@@ -23,10 +23,9 @@
 <form action="#" [formGroup]="signUpForm">
 	<div class="form-content" >
 	   <div class="login-form">
-		   <h3 style="text-align: center; color: white; ">Welcome Back</h3>
 <div class="SignUp-form">
    <div class="title">
-	   Sign Up
+	    تسجيل حساب
    </div>
    <div class="input-boxes">
 <div class="input-box">
@@ -70,7 +69,7 @@
 	  <input type="password" placeholder="تأكيد كلمة المرور" formControlName="ConfirmPassword" (change)="onPasswordChange()">
     <br>
 				<span style="color:indianred" *ngIf="formSubmitted &&signUpForm.controls['ConfirmPassword'].hasError('required')">حقل مطلوب</span>
-        <span style="color:indianred" *ngIf="formSubmitted &&confirm_password.hasError('mismatch')">كلمة المرور غير مطابقة 
+        <span style="color:indianred" *ngIf="formSubmitted &&confirm_password.hasError('mismatch')">كلمة المرور غير مطابقة
         </span>
   </div>
 
