@@ -9,11 +9,14 @@
   /*
    */
 /* .card.text-center{ */
+.navcontainer{
+  border-bottom: 5px rgb(204, 26, 49) solid;
 
+}
 div.card .card-body{
   background: #fff;
  width: 250px;
- text-align: center;
+ /* text-align: center; */
     transform: translateY(-100px);
 }
 div.card:hover .card-body{
@@ -37,11 +40,10 @@ div.col-9{
   margin-right: 0rem;
 }
 
-  div#navbarTogglerDemo03.collapse.navbar-collapse{
-    border-bottom: 5px rgb(204, 26, 49) solid;
+  /* div#navbarTogglerDemo03.collapse.navbar-collapse{
     background-color: rgb(22, 21, 28);
-    /* height: 19vh; */
-  }
+    height: 19vh;
+  } */
   div.navbar-brand{
     color: white;
     border-bottom: 5px rgb(204, 26, 49) solid;
@@ -95,7 +97,7 @@ div.col-9{
     color:rgb(28, 221, 54);
   }
  a.fas.fa-shopping-cart{
-  margin-right: 80px;
+  /* margin-right: 80px; */
   color:rgb(189, 178, 178);
   font-size: 20px;
   cursor: pointer;
