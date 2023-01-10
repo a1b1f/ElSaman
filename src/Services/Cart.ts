@@ -22,14 +22,14 @@ export class CartServices{
 
     GetAllCart( ){
 
-        return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetAPI",this.getheader());
+        return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/ProductAPI/GetAPI",this.getheader());
     }
 
     GetCart(){
-        return this.http.get<ResultViewModel>("https://localhost:7129/CartAPI/Get",this.getheader());
+        return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/CartAPI/Get",this.getheader());
     }
     GetProductById(RecipeID:number){
-        return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetDetails?ID="+RecipeID,this.getheader());
+        return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/ProductAPI/GetDetails?ID="+RecipeID,this.getheader());
     }
     AddCart(Qty:number,ProducrID:number,userId:string){
       console.log(ProducrID)
@@ -37,7 +37,7 @@ export class CartServices{
         cart.qty=Qty;
         cart.productID = ProducrID;
         cart.UserId = userId
-        return this.http.post<ResultViewModel>("https://localhost:7129/CartAPI/Add",cart,this.getheader());
+        return this.http.post<ResultViewModel>("http://elsaman-001-site1.atempurl.com/CartAPI/Add",cart,this.getheader());
     }
     UpdateCart(Qty:number,ID:number,ProductID:number,userId:string){
         let cart = new addcart()
@@ -45,11 +45,11 @@ export class CartServices{
         cart.id = ID;
         cart.productID=ProductID
         cart.UserId = userId
-        return this.http.post<ResultViewModel>("https://localhost:7129/CartAPI/Update",cart,this.getheader());
+        return this.http.post<ResultViewModel>("http://elsaman-001-site1.atempurl.com/CartAPI/Update",cart,this.getheader());
     }
 
     RempveCart(CartID:number){
-        return this.http.post<ResultViewModel>("https://localhost:7129/CartAPI/Remove",{ID:CartID},this.getheader());
+        return this.http.post<ResultViewModel>("http://elsaman-001-site1.atempurl.com/CartAPI/Remove",{ID:CartID},this.getheader());
     }
 
 }

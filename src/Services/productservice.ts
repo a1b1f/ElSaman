@@ -5,26 +5,26 @@ import { ResultViewModel } from "src/ViewModels/result-view-model";
 export class productservice {
   constructor(private http:HttpClient){}
   getProduct(pageSize :number,pageIndex:number){
-    return this.http.get<ResultViewModel>(`https://localhost:7129/ProductAPI/GetAPI?pageSize=${pageSize}&pageIndex=${pageIndex}`);
+    return this.http.get<ResultViewModel>(`http://elsaman-001-site1.atempurl.com/ProductAPI/GetAPI?pageSize=${pageSize}&pageIndex=${pageIndex}`);
 }
 
 getProductByID(id:number){
-  return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetDetails?id="+id);
+  return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/ProductAPI/GetDetails?id="+id);
 
 }
 
 getProductByName(rName:string){
-  return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetAPI?nameEN="+rName);
+  return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/ProductAPI/GetAPI?nameEN="+rName);
 }
 
 getCategories(){
-  return this.http.get<ResultViewModel>("https://localhost:7129/CategoryAPI/Get");
+  return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/CategoryAPI/Get");
 }
 getByCategory(cName:string){
-  return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetAPI?category="+cName)
+  return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/ProductAPI/GetAPI?category="+cName)
 }
 
 getRating(){
-  return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetAPI");
+  return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/ProductAPI/GetAPI");
 }
 }

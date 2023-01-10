@@ -10,18 +10,18 @@ export class StoreService
 {
     constructor(private Http:HttpClient) { }
     getStore(pageSize :number,pageIndex:number){
-        return this.Http.get<ResultViewModel>(`https://localhost:7129/StoreAPI/Get?pageSize=${pageSize}&pageIndex=${pageIndex}`);
+        return this.Http.get<ResultViewModel>(`http://elsaman-001-site1.atempurl.com/StoreAPI/Get?pageSize=${pageSize}&pageIndex=${pageIndex}`);
     }
     getStoreByName(rName:string){
-        return this.Http.get<ResultViewModel>("https://localhost:7129/StoreAPI/Get?nameEN="+rName);
+        return this.Http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/StoreAPI/Get?nameEN="+rName);
     }
     getStoreByID(id:number){
-        return this.Http.get<ResultViewModel>("https://localhost:7129/StoreAPI/Get?id="+id);
+        return this.Http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/StoreAPI/Get?id="+id);
 
     }
 
     Show(StoreID:number){
-        return this.Http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetAPI?ResturantID="+StoreID);
+        return this.Http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/ProductAPI/GetAPI?ResturantID="+StoreID);
     }
 
 }

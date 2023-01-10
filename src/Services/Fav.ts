@@ -22,28 +22,28 @@ export class favServices{
 
     GetAllFav( ){
 
-        return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetAPI",this.getheader());
+        return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/ProductAPI/GetAPI",this.getheader());
     }
     GetProductById(RecipeID:number){
-      return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetDetails?ID="+RecipeID,this.getheader());
+      return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/ProductAPI/GetDetails?ID="+RecipeID,this.getheader());
   }
 
     GetFav(){
-        return this.http.get<ResultViewModel>("https://localhost:7129/FavAPI/Get",this.getheader());
+        return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/FavAPI/Get",this.getheader());
     }
     GetRecipeById(RecipeID:number){
-        return this.http.get<ResultViewModel>("https://localhost:7129/ProductAPI/GetDetails?ID="+RecipeID,this.getheader());
+        return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/ProductAPI/GetDetails?ID="+RecipeID,this.getheader());
     }
     AddFav(productID:number,userId:string){
         let fav = new addfav()
         fav.productID = productID;
         fav.UserId = userId
-        return this.http.post<ResultViewModel>("https://localhost:7129/FavAPI/Add",fav,this.getheader());
+        return this.http.post<ResultViewModel>("http://elsaman-001-site1.atempurl.com/FavAPI/Add",fav,this.getheader());
     }
 
 
     RempveFav(FavID:number){
-        return this.http.post<ResultViewModel>("https://localhost:7129/FavAPI/Remove",{ID:FavID},this.getheader());
+        return this.http.post<ResultViewModel>("http://elsaman-001-site1.atempurl.com/FavAPI/Remove",{ID:FavID},this.getheader());
     }
 
 }

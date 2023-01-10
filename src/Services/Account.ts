@@ -26,24 +26,24 @@ getCurrentUserId():string{
   //return "0390521a-4c6b-4ad0-a45c-6b0a15167719"
 }
     login(log:LoginViewModel){
-      return this.http.post<ResultViewModel>("https://localhost:7129/UserAPI/SignIn",log);
+      return this.http.post<ResultViewModel>("http://elsaman-001-site1.atempurl.com/UserAPI/SignIn",log);
     }
 
     SignUp(log:SignUpViewModel,Role:string){
       let signup=new SignUpViewModel()
       signup.Role=Role;
 
-      return this.http.post<ResultViewModel>("https://localhost:7129/UserAPI/SignUp",log);
+      return this.http.post<ResultViewModel>("http://elsaman-001-site1.atempurl.com/UserAPI/SignUp",log);
     }
 
     EditProfile(log:EditProfileViewModel,userid:string){
       let Editprofile=new EditProfileViewModel()
-      return this.http.post<ResultViewModel>("https://localhost:7129/UserAPI/Edit",log);
+      return this.http.post<ResultViewModel>("http://elsaman-001-site1.atempurl.com/UserAPI/Edit",log);
     }
 
 
     LogOut(token:string){
-      return this.http.post<ResultViewModel>("https://localhost:7129/UserAPI/SignOut",{token:token});
+      return this.http.post<ResultViewModel>("http://elsaman-001-site1.atempurl.com/UserAPI/SignOut",{token:token});
     }
 
     IsLoggedIn():boolean{
@@ -54,6 +54,6 @@ getCurrentUserId():string{
       return false;
   }
   GetUserInfo(ID:string ){
-    return this.http.get<ResultViewModel>("https://localhost:7129/UserAPI/GetById?ID="+ID)}
+    return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/UserAPI/GetById?ID="+ID)}
 
 }

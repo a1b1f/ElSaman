@@ -19,25 +19,25 @@ export class OrderServices{
     }
     constructor(private http:HttpClient){}
     GetCartByUser(userId:string){
-        return this.http.get<ResultViewModel>("https://localhost:7129/CartAPI/GetByUser?userId="+userId);
+        return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/CartAPI/GetByUser?userId="+userId);
     }
     AddOrder(OrderDetails:Order){
 
-        return this.http.post<ResultViewModel>("https://localhost:7129/OrderAPI/Add",OrderDetails);
+        return this.http.post<ResultViewModel>("http://elsaman-001-site1.atempurl.com/OrderAPI/Add",OrderDetails);
     }
     GetAllOrders(userId:string){
-        return this.http.get<ResultViewModel>("https://localhost:7129/OrderAPI/Get?userId="+userId);
+        return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/OrderAPI/Get?userId="+userId);
     }
     GetAllOrderLists(OrderID:number){
-        return this.http.get<ResultViewModel>("https://localhost:7129/OrderListAPI/GetByOrderID?OrderID="+OrderID);
+        return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/OrderListAPI/GetByOrderID?OrderID="+OrderID);
     }
     getLastOrder(userId:string)
     {
-        return  this.http.get<ResultViewModel>("https://localhost:7129/OrderAPI/GetLastOrder?userId="+userId)
+        return  this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/OrderAPI/GetLastOrder?userId="+userId)
 
     }
     GetFavByUser(userId:string){
-      return this.http.get<ResultViewModel>("https://localhost:7129/FavAPI/GetByUser?userId="+userId);
+      return this.http.get<ResultViewModel>("http://elsaman-001-site1.atempurl.com/FavAPI/GetByUser?userId="+userId);
   }
 }
 
