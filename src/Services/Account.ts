@@ -33,7 +33,7 @@ getCurrentUserId():string{
       let signup=new SignUpViewModel()
       signup.Role=Role;
 
-      return this.http.post<ResultViewModel>(environment.apiURl+"UserAPI/SignUp",log);
+      return this.http.post<ResultViewModel>("https://localhost:7129/UserAPI/SignUp",log);
     }
 
     EditProfile(log:EditProfileViewModel,userid:string){
