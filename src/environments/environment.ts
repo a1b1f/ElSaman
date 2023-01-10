@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiURl:"https://localhost:7129/"
+  apiURl:"http://elsaman-001-site1.atempurl.com/"
 };
 
 /*
