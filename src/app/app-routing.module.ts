@@ -27,7 +27,7 @@ const routes: Routes = [
   {path:"order/sent",component:AfterorderComponent},
   {path:"signup",component:SignUpComponent},
   {path:"login",component:LoginComponent},
-  {path:"profile",component:ProfileComponent}
+  {path:"profile",component:ProfileComponent,canActivate:[AuthGuard]}
 
 
 
