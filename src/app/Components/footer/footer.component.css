@@ -90,3 +90,6 @@ footer .social-icons :hover {
   color: rgb(72, 65, 65);
   cursor: pointer;
 }
+p{
+  margin-bottom: 0;
+}
