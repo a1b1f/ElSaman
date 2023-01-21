@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
     this.acc.login(log).subscribe(res=>{
       if(res.success){
         console.log(res.data);
+        this.acc.setLooggedStatus(true);
         localStorage.setItem('token',res.data.token);
         localStorage.setItem('userId',res.data.userId);
         localStorage.setItem('username',log.Email);

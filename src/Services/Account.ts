@@ -1,6 +1,6 @@
 import { HttpClient } from "@angular/common/http";
 import { Injectable } from "@angular/core";
-import { Subject } from "rxjs";
+import { BehaviorSubject, Subject } from "rxjs";
 import { environment } from "src/environments/environment";
 import { EditProfileViewModel } from "src/ViewModels/EditProfileViewModel";
 import { LoginViewModel } from "src/ViewModels/Login";
@@ -10,7 +10,7 @@ import { SignUpViewModel } from "src/ViewModels/SignUp";
 
 @Injectable()
 export class AccountServices{
-  Logged:Subject<boolean> = new Subject<boolean>();
+  Logged:BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
     constructor(private http:HttpClient){
       this.Logged.next(this.IsLoggedIn());
     }

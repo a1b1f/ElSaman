@@ -15,16 +15,20 @@ export class NavComponent implements OnInit {
   @Input() accountname:SignUpViewModel= new SignUpViewModel();
 
   constructor(private LogOutt: AccountServices, private http: HttpClient) {
-    this.LogOutt.getLooggedStatus().subscribe(
-      res => this.isloog = res
-    )
+    // this.LogOutt.getLooggedStatus().subscribe(
+    //   res => this.isloog = res
+    // )
   }
   isloog = true;
 
   ngOnInit(): void {
     this.LogOutt.getLooggedStatus().subscribe(
-      res => this.isloog = res
+      res => {
+        this.isloog = res        
+        
+      }
     )
+
   }
   LogOut() {
     let token = localStorage.getItem("token");
