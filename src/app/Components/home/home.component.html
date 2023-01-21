@@ -18,7 +18,7 @@
     <h3 class="sub-heading">المنتجات </h3>
     <main class="d-grid">
       <div class="row">
-      <section  *ngFor="let item of products "  class="col" >
+      <section  *ngFor="let item of filtered "  class="col" >
         <div >
           <app-product-card [product]="item"></app-product-card>
         </div>

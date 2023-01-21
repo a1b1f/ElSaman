@@ -25,6 +25,7 @@ export class HomeComponent implements OnInit {
   tableSizes: any = [1, 5, 10, 20];
   products:Product[]=[];
   unfiltered:Product[]=[];
+  filtered:Product[]=[];
   Rating:Rating[]=[];
   Categories:Category[]=[];
   productName:string="";
@@ -61,6 +62,8 @@ console.log(productID)
       this.tableSize = responce.pageSize;
       this.count = responce.count;
       this.products = responce.data as Product[];
+      this.filtered=this.products.filter(e=> e.isDeleted==false);
+      console.log( this.filtered)
       // this.Recipes=this.Recipes.filter(i=> i.resturantID!=null)
       // console.log(res);
       console.log(this.products);
