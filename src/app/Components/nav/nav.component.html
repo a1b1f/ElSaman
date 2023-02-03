@@ -1,41 +1,6 @@
 
-  <!-- <nav class="navs navstyle">
-    <div class="cont1">
-  <div class="brand">
-    <a routerLink="/Cart" class="fas fa-shopping-cart"></a>
-    <a routerLink="/favorite"  class="fas fa-heart" id="heart"></a>
-    <i class="fa-solid fa-arrow-right-from-bracket" (click)="LogOut()" *ngIf="isloog"></i>
-    <i class="fa-solid fa-door-open"  *ngIf="!isloog" routerLink="/login"></i>
-    <i routerLink="/profile" class="fa-solid fa-user" *ngIf="isloog"></i>
-    <a routerLink="/Home">الصفحة الرئيسية </a>
-    <a routerLink="/Product"> المنتجات </a>
-
-   <a routerLink="/Team">معلومات عن</a>
-   <i class="fas fa-bars" id="menu-bars"></i>
-    <i ></i>
-  </div>
-    </div>
-  </nav> -->
-
- <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-color: black;">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
-    <a class="navbar-brand " routerLink="/Home">الصفحة الرئيسية</a>
-    <a class="navbar-brand"  routerLink="/Product"> المنتجات</a>
-    <a class="navbar-brand" routerLink="/Team" > معلومات عن </a>
-    <i routerLink="/profile" class="fa-solid fa-user" *ngIf="isloog"></i>
-        <i class="fa-solid fa-arrow-right-from-bracket" (click)="LogOut()" *ngIf="isloog"></i>
-        <i class="fa-solid fa-door-open"  *ngIf="!isloog" routerLink="/login"></i>
-        <a routerLink="/favorite"  class="fas fa-heart" id="heart"></a>
-        <a routerLink="/Cart" class="fas fa-shopping-cart"></a>
-        <i class="fas fa-bars" id="menu-bars"></i>
-
-  </div>
-</nav> -->
-<div class="navcontainer">
- <nav class="navbar navbar-expand-lg bg-dark navbar-dark" >
+<!-- <div class="navcontainer">
+ <nav class="navbar navbar-expand-sm sticky-top navbar-light bg-dark" >
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon" ></span>
     </button>
@@ -63,16 +28,52 @@
           <i routerLink="/favorite"  class="fas fa-heart" id="heart"></i>
         </li>
         <li>
-
           <i routerLink="/Cart" class="fas fa-shopping-cart"></i>
         </li>
       </ul>
-
-
           <i class="fas fa-bars" id="menu-bars"></i>
     </div>
-
 </nav>
+</div> -->
 
-</div>
 
+
+
+<nav class="navbar navbar-expand-sm sticky-top navbar-dark bg-dark">
+  <div class="container">
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon" ></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="navbar-brand " routerLink="/Home" >الصفحة الرئيسية</a>
+          </li>
+          <li class="nav-item active">
+            <a class="navbar-brand"  routerLink="/Product"> المنتجات</a>
+          </li>
+          <li class="nav-item active">
+            <a class="navbar-brand" routerLink="/Team" > معلومات عن </a>
+          </li>
+          <span style="display: flex;">
+            <li class="nav-item active">
+              <i routerLink="/profile" class="fa-solid fa-user" *ngIf="isloog"></i>
+            </li>
+            <li class="nav-item active">
+              <i class="fa-solid fa-arrow-right-from-bracket" (click)="LogOut()" *ngIf="isloog"></i>
+            </li>
+            <li class="nav-item active">
+              <i class="fa-solid fa-door-open"  *ngIf="!isloog" routerLink="/login"></i>
+            </li>
+            <li>
+              <i routerLink="/favorite"  class="fas fa-heart" id="heart"></i>
+            </li>
+            <li>
+              <i routerLink="/Cart" class="fas fa-shopping-cart"></i>
+            </li>
+          </span>
+        </ul>
+            <i class="fas fa-bars" id="menu-bars"></i>
+      </div>
+  </div>
+</nav>
