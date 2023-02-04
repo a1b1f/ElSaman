@@ -46,6 +46,7 @@
       </button>
       <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
         <ul class="navbar-nav mr-auto">
+          <span style="display: flex; flex-wrap: wrap;">
           <li class="nav-item active">
             <a class="navbar-brand " routerLink="/Home" >الصفحة الرئيسية</a>
           </li>
@@ -55,7 +56,8 @@
           <li class="nav-item active">
             <a class="navbar-brand" routerLink="/Team" > معلومات عن </a>
           </li>
-          <span style="display: flex;">
+        </span>
+          <span style="display: flex; flex-wrap: wrap;">
             <li class="nav-item active">
               <i routerLink="/profile" class="fa-solid fa-user" *ngIf="isloog"></i>
             </li>
