@@ -2,7 +2,7 @@
 
 .container{
   width: 75%;
-  margin: 8% auto;
+  margin: 8% auto 20% auto;
 
 
 }
@@ -10,7 +10,9 @@ section {
   display: grid;
   grid-template-columns: repeat(5,1fr);
   padding: 0.5rem;
+  
 }
+
 .item{
   font-size: 1.2rem;
   color: #143444;

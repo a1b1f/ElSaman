@@ -5,7 +5,7 @@ import { ResultViewModel } from "src/ViewModels/result-view-model";
 export class productservice {
   constructor(private http:HttpClient){}
   getProduct(pageSize :number,pageIndex:number){
-    return this.http.get<ResultViewModel>(`http://elsaman-001-site1.atempurl.com/ProductAPI/GetAPI?pageSize=${pageSize}&pageIndex=${pageIndex}`);
+    return this.http.get<ResultViewModel>(`https://localhost:7129/ProductAPI/GetAll`);
 }
 
 getProductByID(id:number){

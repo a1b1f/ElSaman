@@ -14,7 +14,7 @@ export class ProductListComponent implements OnInit {
   count: number = 1; //total pages
 
   //number of elements to get form database per request
-  tableSize: number = 10;
+  tableSize: number = 15;
   tableSizes: any = [1, 5, 10, 20];
   Products:Product[]=[];
   unfiltered:Product[]=[];
@@ -33,10 +33,13 @@ export class ProductListComponent implements OnInit {
      console.log(res.data)
 
       let response = res.data as PagingViewModel
-      this.page = response.pageIndex;
-      this.tableSize = response.pageSize;
-      this.count = response.count;
-      this.Products = response.data as Product[];
+      // this.page = response.pageIndex;
+      // this.tableSize = response.pageSize;
+      this.Products = res.data as Product[];
+      this.count =this.Products.length;
+
+      console.log(this.Products);
+      
       this.filtered=this.Products;
       this.getProductByName();
       this.ProductService.getCategories().subscribe(res=>
@@ -74,11 +77,13 @@ export class ProductListComponent implements OnInit {
         }
         else{
           this.ProductService.getProduct(this.tableSize,this.page).subscribe(res => {
+            console.log(res);
+            
             let response = res.data as PagingViewModel
-            this.page = response.pageIndex;
-            this.tableSize = response.pageSize;
-            this.count = response.count;
-            this.Products = response.data as Product[];})
+            // this.page = response.pageIndex;
+            this.tableSize = 9;
+            this.count = res.data.length;
+            this.Products = res.data as Product[];})
 
         }
   }

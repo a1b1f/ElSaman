@@ -58,24 +58,20 @@ a{
 .foter {
   text-align: center;
   padding-top: 5px;
-  margin-top: 282px;
+  /* margin-top: 282px; */
   /* padding-bottom: 10px; */
+ 
 
 }
 
 .foter h3 {
-  color: rgb(197, 181, 183);
+  color: white
 }
 
 .foter p {
-  color: rgb(197, 181, 183);
+  color: white
 }
 
-footer {
-  background: rgb(22, 21, 28);
-  ;
-
-}
 
 
 .sthr:hover {
@@ -84,7 +80,7 @@ footer {
 }
 
 footer .social-icons {
-  color:rgb(197, 181, 183);
+  color:white
 }
 
 footer .social-icons :hover {
