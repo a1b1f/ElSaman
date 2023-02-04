@@ -55,18 +55,28 @@ console.log(productID)
       })
   }
   fetchData() {
-    console.log(this.tableSize,this.page)
+    //console.log(this.tableSize,this.page)
     this.ProductService.getProduct(this.tableSize,this.page).subscribe(res => {
-      let responce = res.data as PagingViewModel
-      this.page = responce.pageIndex;
-      this.tableSize = responce.pageSize;
-      this.count = responce.count;
-      this.products = responce.data as Product[];
-      this.filtered=this.products.filter(e=> e.isDeleted==false);
-      console.log( this.filtered)
-      // this.Recipes=this.Recipes.filter(i=> i.resturantID!=null)
-      // console.log(res);
+     console.log(res.data)
+
+      let response = res.data as PagingViewModel
+      // this.page = response.pageIndex;
+      // this.tableSize = response.pageSize;
+      this.products = res.data as Product[];
+      this.count =this.products.length;
+
       console.log(this.products);
+
+      this.filtered=this.products;
+      // this.getProductByName();
+      this.ProductService.getCategories().subscribe(res=>
+        {
+          console.log(res)
+          this.Categories=res.data ;
+          // var c = new Category();
+          // c.nameAR="الكل";
+          // this.Categories.push(c);
+        })
     })
   }
   onTableDataChange(event: any) {
